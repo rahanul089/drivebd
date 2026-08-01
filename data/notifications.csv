@@ -1,0 +1,134 @@
+id,user_id,message,category,date,is_read
+1,2,Your document NID is due for renewal soon.,info,2026-06-28 04:30:00,True
+2,3,Your document Vehicle Registration is due for renewal soon.,info,2025-02-16 18:35:00,False
+3,3,Your vehicle fitness certificate has expired.,alert,2025-10-13 13:28:00,False
+4,3,Payment of BDT 1682 received successfully.,info,2025-06-01 04:31:00,False
+5,3,You have an unpaid fine of BDT 4704.,warning,2026-06-02 16:07:00,True
+6,4,Payment of BDT 1784 received successfully.,info,2025-07-26 11:58:00,True
+7,4,Your appeal has been submitted for review.,info,2024-05-03 11:36:00,False
+8,4,Your document Tax Token is due for renewal soon.,info,2024-04-30 11:19:00,False
+9,4,Your vehicle fitness certificate has expired.,alert,2024-01-29 04:09:00,False
+10,5,Your vehicle fitness certificate has expired.,alert,2024-07-06 23:31:00,True
+11,6,Your appeal has been submitted for review.,info,2026-06-10 01:26:00,False
+12,7,Your vehicle fitness certificate has expired.,alert,2026-07-10 10:50:00,False
+13,7,Payment of BDT 1587 received successfully.,info,2026-02-19 04:32:00,False
+14,7,Payment of BDT 4178 received successfully.,info,2024-06-01 23:20:00,True
+15,7,Your appeal has been submitted for review.,info,2025-01-31 07:57:00,False
+16,7,Your vehicle fitness certificate has expired.,alert,2025-11-17 14:47:00,False
+17,8,You have an unpaid fine of BDT 703.,warning,2025-08-08 20:50:00,False
+18,9,Your document Insurance is due for renewal soon.,info,2024-07-16 19:34:00,True
+19,9,Your appeal has been submitted for review.,info,2026-02-07 15:32:00,True
+20,9,Your document Insurance is due for renewal soon.,info,2024-07-03 00:17:00,True
+21,9,You have an unpaid fine of BDT 4139.,warning,2024-03-27 17:38:00,False
+22,9,Payment of BDT 868 received successfully.,info,2025-05-18 00:21:00,False
+23,10,Payment of BDT 4824 received successfully.,info,2024-11-20 12:16:00,True
+24,10,Your document NID is due for renewal soon.,info,2024-06-21 09:09:00,True
+25,11,Your document Driving License is due for renewal soon.,info,2025-02-21 21:10:00,True
+26,11,Your appeal has been submitted for review.,info,2024-01-28 22:03:00,False
+27,11,Payment of BDT 3121 received successfully.,info,2024-05-25 13:57:00,False
+28,12,Payment of BDT 924 received successfully.,info,2024-07-26 07:48:00,True
+29,12,Payment of BDT 4632 received successfully.,info,2025-01-29 03:17:00,True
+30,12,Your vehicle fitness certificate has expired.,alert,2024-03-08 15:01:00,False
+31,13,Your document Vehicle Registration is due for renewal soon.,info,2024-09-09 17:41:00,True
+32,13,Your vehicle fitness certificate has expired.,alert,2025-04-01 02:54:00,True
+33,14,Your vehicle fitness certificate has expired.,alert,2026-03-11 07:34:00,False
+34,14,Your appeal has been submitted for review.,info,2024-01-02 14:53:00,False
+35,15,Your document NID is due for renewal soon.,info,2024-10-06 19:16:00,False
+36,15,Your vehicle fitness certificate has expired.,alert,2025-08-22 16:18:00,True
+37,16,Your appeal has been submitted for review.,info,2024-11-03 02:25:00,True
+38,16,You have an unpaid fine of BDT 2789.,warning,2026-06-18 13:13:00,False
+39,17,Your vehicle fitness certificate has expired.,alert,2024-10-06 07:42:00,False
+40,17,Your vehicle fitness certificate has expired.,alert,2025-09-05 10:01:00,True
+41,17,Your document Tax Token is due for renewal soon.,info,2024-01-05 00:43:00,True
+42,18,Your appeal has been submitted for review.,info,2026-02-19 12:34:00,True
+43,18,Your document Tax Token is due for renewal soon.,info,2026-07-02 21:28:00,True
+44,18,Your vehicle fitness certificate has expired.,alert,2025-01-31 05:53:00,True
+45,18,Your document Fitness Certificate is due for renewal soon.,info,2024-07-16 14:00:00,True
+46,19,Your vehicle fitness certificate has expired.,alert,2024-07-15 02:52:00,False
+47,20,You have an unpaid fine of BDT 3473.,warning,2024-02-07 08:31:00,True
+48,20,Your document Driving License is due for renewal soon.,info,2024-04-23 08:36:00,False
+49,21,Your appeal has been submitted for review.,info,2024-03-07 18:08:00,True
+50,21,You have an unpaid fine of BDT 2367.,warning,2026-06-21 16:46:00,False
+51,22,Your document Insurance is due for renewal soon.,info,2025-09-21 08:43:00,False
+52,22,Your document Fitness Certificate is due for renewal soon.,info,2026-05-24 10:27:00,False
+53,23,Your document Insurance is due for renewal soon.,info,2025-04-22 15:23:00,True
+54,23,You have an unpaid fine of BDT 2776.,warning,2026-07-29 13:34:00,False
+55,23,Your vehicle fitness certificate has expired.,alert,2024-07-18 10:05:00,True
+56,24,Payment of BDT 2547 received successfully.,info,2024-07-20 05:21:00,False
+57,24,Your document Insurance is due for renewal soon.,info,2024-01-29 15:27:00,True
+58,25,Your vehicle fitness certificate has expired.,alert,2024-04-20 15:15:00,False
+59,25,Your document Vehicle Registration is due for renewal soon.,info,2026-03-24 07:04:00,False
+60,25,Your document Insurance is due for renewal soon.,info,2025-08-15 03:05:00,True
+61,25,Your document Fitness Certificate is due for renewal soon.,info,2026-06-30 22:04:00,True
+62,25,Your document Fitness Certificate is due for renewal soon.,info,2024-11-04 19:40:00,False
+63,26,Your document Insurance is due for renewal soon.,info,2025-07-26 01:18:00,False
+64,27,Your document Tax Token is due for renewal soon.,info,2024-08-26 19:50:00,True
+65,27,Payment of BDT 4302 received successfully.,info,2026-03-25 13:56:00,True
+66,27,Your vehicle fitness certificate has expired.,alert,2025-04-09 16:21:00,True
+67,27,Your document NID is due for renewal soon.,info,2025-09-01 22:04:00,True
+68,28,You have an unpaid fine of BDT 4668.,warning,2024-09-19 11:26:00,False
+69,28,Your appeal has been submitted for review.,info,2024-09-05 04:51:00,True
+70,28,Your document Driving License is due for renewal soon.,info,2025-08-21 13:32:00,False
+71,28,Your vehicle fitness certificate has expired.,alert,2026-03-05 04:09:00,False
+72,28,Your vehicle fitness certificate has expired.,alert,2024-10-25 11:00:00,True
+73,29,You have an unpaid fine of BDT 947.,warning,2025-03-08 11:12:00,True
+74,30,Your document Vehicle Registration is due for renewal soon.,info,2025-11-14 15:44:00,False
+75,30,Your appeal has been submitted for review.,info,2026-05-22 18:36:00,False
+76,31,Your vehicle fitness certificate has expired.,alert,2024-06-15 03:29:00,True
+77,31,Payment of BDT 530 received successfully.,info,2025-10-16 07:44:00,True
+78,31,Payment of BDT 2246 received successfully.,info,2024-09-01 15:47:00,False
+79,31,Payment of BDT 3779 received successfully.,info,2024-07-07 00:23:00,True
+80,31,Your document Vehicle Registration is due for renewal soon.,info,2025-07-22 03:09:00,False
+81,32,You have an unpaid fine of BDT 3448.,warning,2024-02-14 00:12:00,True
+82,32,Your vehicle fitness certificate has expired.,alert,2026-06-25 08:46:00,True
+83,32,Your vehicle fitness certificate has expired.,alert,2024-07-01 06:01:00,True
+84,32,Your vehicle fitness certificate has expired.,alert,2026-05-01 21:08:00,False
+85,33,Your vehicle fitness certificate has expired.,alert,2025-04-12 07:23:00,False
+86,34,Your appeal has been submitted for review.,info,2026-06-18 22:04:00,True
+87,34,You have an unpaid fine of BDT 2053.,warning,2024-07-15 17:24:00,False
+88,35,Your appeal has been submitted for review.,info,2024-02-17 19:37:00,True
+89,35,Your appeal has been submitted for review.,info,2024-12-01 07:03:00,False
+90,35,You have an unpaid fine of BDT 4505.,warning,2024-08-02 23:05:00,False
+91,36,Your document Driving License is due for renewal soon.,info,2025-02-01 20:48:00,False
+92,36,Payment of BDT 4303 received successfully.,info,2024-07-02 10:45:00,False
+93,36,Your appeal has been submitted for review.,info,2026-01-02 15:30:00,False
+94,36,Your appeal has been submitted for review.,info,2024-07-31 07:57:00,True
+95,36,Payment of BDT 3743 received successfully.,info,2024-08-11 09:27:00,False
+96,37,You have an unpaid fine of BDT 2585.,warning,2025-07-17 02:08:00,True
+97,37,Your vehicle fitness certificate has expired.,alert,2024-12-26 07:37:00,True
+98,37,Payment of BDT 3255 received successfully.,info,2025-03-12 14:29:00,False
+99,37,Payment of BDT 4575 received successfully.,info,2024-11-20 08:24:00,True
+100,37,You have an unpaid fine of BDT 2415.,warning,2024-09-28 20:04:00,False
+101,38,Your vehicle fitness certificate has expired.,alert,2025-07-13 20:05:00,False
+102,39,Your document NID is due for renewal soon.,info,2025-01-03 01:34:00,True
+103,39,Your vehicle fitness certificate has expired.,alert,2024-09-13 09:47:00,False
+104,40,Your appeal has been submitted for review.,info,2026-07-23 08:00:00,False
+105,40,Your vehicle fitness certificate has expired.,alert,2025-02-19 18:48:00,True
+106,41,Your appeal has been submitted for review.,info,2024-08-21 07:46:00,True
+107,41,Payment of BDT 4725 received successfully.,info,2025-08-24 17:48:00,False
+108,41,Payment of BDT 1203 received successfully.,info,2024-11-16 06:27:00,False
+109,41,You have an unpaid fine of BDT 4186.,warning,2026-05-23 17:01:00,False
+110,42,Your appeal has been submitted for review.,info,2026-01-25 00:31:00,False
+111,42,Your vehicle fitness certificate has expired.,alert,2025-03-11 21:48:00,False
+112,43,Your vehicle fitness certificate has expired.,alert,2025-08-04 01:59:00,True
+113,43,You have an unpaid fine of BDT 3702.,warning,2025-01-25 06:25:00,True
+114,43,Your appeal has been submitted for review.,info,2025-05-01 03:21:00,False
+115,43,Your vehicle fitness certificate has expired.,alert,2024-04-16 21:35:00,True
+116,43,Your document Insurance is due for renewal soon.,info,2024-01-28 05:12:00,True
+117,44,Your vehicle fitness certificate has expired.,alert,2024-10-25 21:33:00,True
+118,44,Payment of BDT 3519 received successfully.,info,2025-06-14 00:10:00,False
+119,44,Payment of BDT 1786 received successfully.,info,2024-04-23 04:34:00,False
+120,44,Payment of BDT 1063 received successfully.,info,2025-02-02 06:08:00,True
+121,45,Payment of BDT 4389 received successfully.,info,2024-06-11 19:36:00,False
+122,45,Your appeal has been submitted for review.,info,2026-01-03 21:29:00,False
+123,45,You have an unpaid fine of BDT 1668.,warning,2025-04-01 02:52:00,False
+124,46,You have an unpaid fine of BDT 3194.,warning,2026-07-21 18:56:00,False
+125,46,Payment of BDT 820 received successfully.,info,2026-01-24 02:18:00,False
+126,46,Your vehicle fitness certificate has expired.,alert,2025-02-04 19:52:00,True
+127,46,Payment of BDT 1971 received successfully.,info,2026-07-10 19:46:00,False
+128,46,Payment of BDT 2002 received successfully.,info,2025-12-16 18:06:00,False
+129,47,You have an unpaid fine of BDT 2742.,warning,2026-06-22 20:34:00,False
+130,48,You have an unpaid fine of BDT 3869.,warning,2026-02-19 17:07:00,False
+131,49,Your document Tax Token is due for renewal soon.,info,2025-02-23 14:10:00,False
+132,50,Your appeal has been submitted for review.,info,2024-01-28 02:40:00,False
+133,50,Payment of BDT 3771 received successfully.,info,2026-05-26 06:25:00,True

@@ -1,0 +1,257 @@
+id,vehicle_id,service_date,service_type,cost,workshop,mileage_km,notes
+1,1,2023-06-15,Engine Oil Change,618,Chattogram Motor Works,24367,Customer requested
+2,1,2025-05-02,Battery Replacement,13728,Speed Fix Garage,34264,Routine check
+3,1,2023-10-21,Battery Replacement,4939,Rangpur Vehicle Clinic,119074,Under warranty
+4,1,2024-05-04,Brake Service,10503,Elite Auto Service,10862,Routine check
+5,3,2026-07-08,Full Inspection,13321,City Service Center,92187,Under warranty
+6,4,2024-01-29,Engine Oil Change,9186,Dhaka Auto Care,95870,Routine check
+7,4,2025-08-08,Full Inspection,10763,Elite Auto Service,55554,Customer requested
+8,5,2023-11-02,Battery Replacement,14324,Speed Fix Garage,131420,Routine check
+9,6,2023-04-21,Battery Replacement,6466,City Service Center,55942,Under warranty
+10,7,2023-03-30,Engine Oil Change,12630,Dhaka Auto Care,141865,Routine check
+11,7,2023-11-20,Full Inspection,976,Speed Fix Garage,135978,
+12,7,2023-05-26,Brake Service,12319,Speed Fix Garage,86451,Under warranty
+13,7,2024-02-12,Battery Replacement,11589,City Service Center,61309,
+14,8,2024-04-30,Battery Replacement,7259,Chattogram Motor Works,99443,Routine check
+15,9,2023-04-22,General Servicing,2874,Chattogram Motor Works,120273,Routine check
+16,9,2025-03-04,Tire Replacement,2734,Speed Fix Garage,51896,Customer requested
+17,9,2024-07-06,Brake Service,6003,Chattogram Motor Works,9413,
+18,9,2024-07-28,Brake Service,2320,Speed Fix Garage,121213,Under warranty
+19,10,2024-03-26,Tire Replacement,10389,Chattogram Motor Works,45547,Routine check
+20,10,2023-06-27,General Servicing,14540,Rangpur Vehicle Clinic,129244,Routine check
+21,10,2026-04-26,General Servicing,14213,Speed Fix Garage,74182,
+22,13,2025-06-08,AC Repair,4143,Rangpur Vehicle Clinic,40051,
+23,13,2025-05-05,Engine Oil Change,1156,Speed Fix Garage,133177,
+24,13,2025-05-21,AC Repair,6960,Speed Fix Garage,26689,Under warranty
+25,14,2026-02-17,Full Inspection,703,Elite Auto Service,107592,Routine check
+26,15,2024-05-04,Battery Replacement,1986,Dhaka Auto Care,126772,Customer requested
+27,15,2023-11-28,Battery Replacement,8024,Rangpur Vehicle Clinic,7399,Under warranty
+28,15,2025-08-07,Full Inspection,2771,Elite Auto Service,107262,Routine check
+29,17,2026-07-21,Engine Oil Change,14596,Elite Auto Service,19533,Under warranty
+30,17,2024-11-12,AC Repair,1035,City Service Center,112647,Customer requested
+31,17,2026-06-08,AC Repair,9924,Chattogram Motor Works,22222,Customer requested
+32,17,2023-04-23,AC Repair,11553,City Service Center,14516,
+33,18,2026-06-21,Engine Oil Change,6489,City Service Center,46945,
+34,18,2026-02-22,Battery Replacement,13174,Chattogram Motor Works,37282,Customer requested
+35,18,2024-05-03,AC Repair,2360,Elite Auto Service,126434,Routine check
+36,18,2024-04-06,Tire Replacement,6278,City Service Center,133006,Under warranty
+37,19,2025-02-02,Tire Replacement,7912,Speed Fix Garage,132452,
+38,20,2025-07-14,AC Repair,6531,Elite Auto Service,18203,Routine check
+39,20,2025-07-26,Engine Oil Change,1813,Speed Fix Garage,47874,Customer requested
+40,20,2023-06-07,Engine Oil Change,3199,City Service Center,30366,Routine check
+41,21,2025-12-02,Battery Replacement,871,City Service Center,110192,Routine check
+42,21,2025-08-28,Tire Replacement,7383,Speed Fix Garage,6631,Customer requested
+43,22,2024-04-20,Full Inspection,9013,Elite Auto Service,89048,Under warranty
+44,23,2025-09-22,AC Repair,11409,Elite Auto Service,139979,Under warranty
+45,23,2025-07-26,Tire Replacement,9793,Chattogram Motor Works,81345,Routine check
+46,23,2024-06-16,Brake Service,8433,City Service Center,76535,
+47,24,2025-07-22,Brake Service,10635,Chattogram Motor Works,141330,Customer requested
+48,24,2024-01-09,Brake Service,14251,Elite Auto Service,41235,Routine check
+49,24,2024-05-02,Engine Oil Change,1174,City Service Center,34154,Under warranty
+50,25,2024-02-25,AC Repair,12085,Dhaka Auto Care,84084,Customer requested
+51,25,2023-10-30,Tire Replacement,7847,Rangpur Vehicle Clinic,43623,Customer requested
+52,26,2025-04-08,General Servicing,13091,Chattogram Motor Works,121072,Customer requested
+53,27,2024-08-28,General Servicing,5248,Rangpur Vehicle Clinic,39557,Under warranty
+54,27,2024-11-24,Battery Replacement,2340,Elite Auto Service,126562,
+55,27,2023-10-13,Battery Replacement,9526,Dhaka Auto Care,81761,
+56,28,2025-07-02,Tire Replacement,2015,City Service Center,15426,Routine check
+57,28,2026-04-09,AC Repair,4139,City Service Center,52305,
+58,29,2023-06-28,AC Repair,6962,Chattogram Motor Works,129572,Customer requested
+59,29,2026-05-20,AC Repair,8881,Dhaka Auto Care,95650,Under warranty
+60,29,2023-10-30,Battery Replacement,14488,Speed Fix Garage,97896,Under warranty
+61,29,2025-02-02,Engine Oil Change,5163,City Service Center,93105,Customer requested
+62,32,2025-05-01,Full Inspection,7749,City Service Center,43936,Under warranty
+63,32,2025-04-28,Brake Service,14189,Rangpur Vehicle Clinic,23564,Routine check
+64,32,2024-03-01,Tire Replacement,8276,Rangpur Vehicle Clinic,88927,
+65,32,2026-04-24,Full Inspection,6656,Dhaka Auto Care,2735,Under warranty
+66,33,2025-04-28,Brake Service,9606,Speed Fix Garage,149875,Routine check
+67,33,2024-02-13,Brake Service,14136,Speed Fix Garage,76881,Under warranty
+68,33,2023-03-28,Full Inspection,14037,City Service Center,80669,Under warranty
+69,34,2024-04-04,Engine Oil Change,13463,Dhaka Auto Care,41376,Customer requested
+70,34,2024-09-06,Battery Replacement,14168,Elite Auto Service,124873,
+71,34,2024-08-12,General Servicing,3438,Speed Fix Garage,65159,
+72,34,2023-09-02,Full Inspection,5041,Speed Fix Garage,18491,Customer requested
+73,35,2024-06-12,Battery Replacement,11737,Speed Fix Garage,32348,Customer requested
+74,35,2025-11-15,Battery Replacement,9925,Dhaka Auto Care,69036,Routine check
+75,35,2026-04-06,Engine Oil Change,2894,City Service Center,121859,Routine check
+76,35,2025-01-01,Brake Service,1366,City Service Center,95676,Under warranty
+77,36,2023-04-10,Tire Replacement,5278,Rangpur Vehicle Clinic,21139,Routine check
+78,36,2026-07-10,Brake Service,13028,Dhaka Auto Care,44813,Customer requested
+79,36,2024-10-09,Full Inspection,14344,Elite Auto Service,79924,Customer requested
+80,37,2023-07-16,AC Repair,10003,City Service Center,38674,
+81,37,2023-10-08,AC Repair,5110,City Service Center,128113,Under warranty
+82,37,2024-11-27,Brake Service,2178,Chattogram Motor Works,41515,Routine check
+83,40,2025-05-04,General Servicing,1751,Dhaka Auto Care,35401,
+84,41,2025-01-12,Brake Service,13886,Speed Fix Garage,138133,Customer requested
+85,41,2023-12-19,Battery Replacement,5491,Dhaka Auto Care,32089,Routine check
+86,41,2023-09-21,Full Inspection,11874,Chattogram Motor Works,60395,Customer requested
+87,42,2023-06-10,General Servicing,11818,Dhaka Auto Care,21377,
+88,42,2025-09-18,Full Inspection,7565,Dhaka Auto Care,52472,
+89,43,2025-08-18,Engine Oil Change,4645,Dhaka Auto Care,18366,Customer requested
+90,44,2023-09-11,AC Repair,3865,Rangpur Vehicle Clinic,53435,Routine check
+91,45,2023-07-05,Brake Service,14358,Elite Auto Service,73712,Customer requested
+92,46,2025-10-31,AC Repair,1619,Dhaka Auto Care,4665,Routine check
+93,46,2024-01-28,Tire Replacement,3314,Rangpur Vehicle Clinic,2134,
+94,50,2025-06-19,Battery Replacement,2258,Chattogram Motor Works,94014,Under warranty
+95,50,2025-05-18,Brake Service,8925,Chattogram Motor Works,107844,
+96,52,2023-08-14,AC Repair,2726,Speed Fix Garage,95699,Customer requested
+97,52,2026-02-15,Battery Replacement,1165,Dhaka Auto Care,87013,Under warranty
+98,52,2023-08-25,General Servicing,5146,Speed Fix Garage,82790,Under warranty
+99,52,2024-04-07,AC Repair,7172,City Service Center,113187,Routine check
+100,57,2025-10-03,Battery Replacement,2223,Speed Fix Garage,115834,
+101,58,2025-03-31,Battery Replacement,10175,Dhaka Auto Care,45229,
+102,58,2025-01-14,Brake Service,6048,Chattogram Motor Works,106981,
+103,58,2024-04-21,Full Inspection,7458,Elite Auto Service,131838,Customer requested
+104,58,2026-04-06,AC Repair,4972,Elite Auto Service,105919,Customer requested
+105,59,2025-09-19,AC Repair,5069,Chattogram Motor Works,120179,
+106,59,2023-09-08,Tire Replacement,8517,Speed Fix Garage,61508,Routine check
+107,59,2023-03-02,Engine Oil Change,12588,Dhaka Auto Care,18885,Under warranty
+108,59,2023-02-24,Brake Service,6769,Rangpur Vehicle Clinic,86709,Routine check
+109,60,2023-06-06,Battery Replacement,12814,Rangpur Vehicle Clinic,130024,Under warranty
+110,61,2025-10-01,AC Repair,4787,Rangpur Vehicle Clinic,91076,
+111,61,2023-03-06,General Servicing,14919,Dhaka Auto Care,101566,Under warranty
+112,61,2024-10-06,Full Inspection,6665,Speed Fix Garage,121496,
+113,61,2023-03-09,Brake Service,9620,Elite Auto Service,80441,Routine check
+114,62,2024-10-01,Battery Replacement,6874,Speed Fix Garage,29673,Under warranty
+115,62,2026-02-08,Battery Replacement,9337,Rangpur Vehicle Clinic,124160,Under warranty
+116,63,2025-11-03,Engine Oil Change,6912,City Service Center,130680,Under warranty
+117,63,2026-06-17,Battery Replacement,6279,City Service Center,85012,
+118,64,2023-09-20,Full Inspection,6503,City Service Center,8051,Customer requested
+119,65,2024-12-07,Tire Replacement,7249,City Service Center,15797,Routine check
+120,65,2024-05-22,Brake Service,11118,City Service Center,23266,
+121,65,2024-09-16,Engine Oil Change,6031,Chattogram Motor Works,6167,Customer requested
+122,65,2023-03-18,General Servicing,11276,Speed Fix Garage,149910,Under warranty
+123,66,2026-04-19,Engine Oil Change,5685,Speed Fix Garage,103315,Customer requested
+124,66,2026-03-18,Engine Oil Change,13743,Speed Fix Garage,27229,Routine check
+125,66,2024-11-19,General Servicing,8737,Elite Auto Service,90008,Routine check
+126,66,2026-06-13,Tire Replacement,6452,Speed Fix Garage,53889,Under warranty
+127,67,2026-01-02,Brake Service,5208,City Service Center,13460,Customer requested
+128,69,2026-07-03,Battery Replacement,2006,Elite Auto Service,25833,Customer requested
+129,69,2024-07-13,Engine Oil Change,9780,Rangpur Vehicle Clinic,125588,Under warranty
+130,70,2024-09-10,AC Repair,13674,City Service Center,114484,Customer requested
+131,71,2024-05-29,AC Repair,8943,Speed Fix Garage,144540,Routine check
+132,71,2023-02-08,Battery Replacement,12023,Rangpur Vehicle Clinic,49900,Under warranty
+133,71,2024-03-12,Battery Replacement,13998,Elite Auto Service,123498,Customer requested
+134,71,2026-07-30,AC Repair,13753,Rangpur Vehicle Clinic,114698,
+135,72,2025-08-05,Brake Service,4438,Chattogram Motor Works,79715,Under warranty
+136,72,2025-04-20,Tire Replacement,14593,Dhaka Auto Care,54361,Under warranty
+137,72,2024-06-30,Full Inspection,5202,Elite Auto Service,43096,Customer requested
+138,73,2025-04-11,Brake Service,2360,Chattogram Motor Works,51309,
+139,73,2024-05-17,Full Inspection,14053,City Service Center,122676,Under warranty
+140,74,2025-05-14,Battery Replacement,1106,Chattogram Motor Works,42774,Customer requested
+141,74,2023-10-07,Engine Oil Change,4733,City Service Center,145364,Routine check
+142,74,2023-03-28,Battery Replacement,8460,Dhaka Auto Care,15503,
+143,74,2024-10-04,AC Repair,5382,Dhaka Auto Care,107694,Customer requested
+144,75,2025-03-23,Full Inspection,12365,Chattogram Motor Works,62876,
+145,76,2025-12-04,Battery Replacement,14082,Rangpur Vehicle Clinic,138693,Customer requested
+146,77,2024-05-02,AC Repair,2503,City Service Center,87320,Under warranty
+147,81,2023-12-25,Brake Service,4998,Speed Fix Garage,108053,Customer requested
+148,83,2023-08-20,Tire Replacement,9441,Speed Fix Garage,125480,Routine check
+149,83,2024-07-22,Full Inspection,2874,City Service Center,125576,Customer requested
+150,83,2024-09-23,Engine Oil Change,11074,Rangpur Vehicle Clinic,10125,
+151,84,2024-06-02,AC Repair,6802,City Service Center,96120,
+152,84,2025-12-31,Full Inspection,4372,Speed Fix Garage,102835,
+153,86,2024-09-08,Engine Oil Change,13979,Chattogram Motor Works,78967,Routine check
+154,86,2023-11-25,General Servicing,10844,City Service Center,107506,
+155,86,2024-07-15,Full Inspection,1812,Speed Fix Garage,124493,Under warranty
+156,88,2023-07-25,Full Inspection,3127,Elite Auto Service,69411,
+157,88,2024-12-21,General Servicing,10365,Elite Auto Service,144583,Customer requested
+158,88,2025-07-17,Battery Replacement,948,Dhaka Auto Care,49166,Under warranty
+159,88,2023-10-06,Engine Oil Change,7064,Chattogram Motor Works,81097,Customer requested
+160,89,2023-11-20,Brake Service,8960,Elite Auto Service,35103,Under warranty
+161,91,2023-10-01,Tire Replacement,3342,Elite Auto Service,86873,Customer requested
+162,91,2024-02-11,Engine Oil Change,7291,City Service Center,48681,Under warranty
+163,91,2025-02-11,Full Inspection,14989,Rangpur Vehicle Clinic,59847,
+164,91,2023-02-17,AC Repair,11102,Rangpur Vehicle Clinic,60954,
+165,93,2023-04-12,General Servicing,10625,Speed Fix Garage,69198,Routine check
+166,93,2023-07-02,Tire Replacement,3287,Rangpur Vehicle Clinic,31762,
+167,95,2025-10-09,Engine Oil Change,4177,Elite Auto Service,54253,Routine check
+168,95,2024-06-29,Tire Replacement,12729,Speed Fix Garage,101158,Routine check
+169,95,2025-06-02,Full Inspection,3885,Rangpur Vehicle Clinic,57509,Customer requested
+170,95,2024-01-23,General Servicing,3455,Speed Fix Garage,39258,
+171,96,2024-04-27,AC Repair,7888,Chattogram Motor Works,97898,Under warranty
+172,96,2023-06-25,Engine Oil Change,8182,Chattogram Motor Works,85736,Under warranty
+173,96,2024-03-10,Battery Replacement,6783,Elite Auto Service,111963,Customer requested
+174,97,2023-04-17,Tire Replacement,4347,Speed Fix Garage,93878,
+175,98,2024-09-11,General Servicing,11497,City Service Center,35665,
+176,98,2026-04-03,Brake Service,4764,Chattogram Motor Works,133054,Under warranty
+177,98,2024-11-25,General Servicing,2661,Dhaka Auto Care,84182,Under warranty
+178,98,2023-10-18,Tire Replacement,2414,City Service Center,12576,Routine check
+179,99,2025-01-08,General Servicing,5135,City Service Center,70142,Customer requested
+180,99,2025-06-11,Brake Service,5669,Elite Auto Service,129784,Routine check
+181,99,2026-02-12,Full Inspection,11271,Elite Auto Service,116340,
+182,100,2024-04-15,Brake Service,1087,Speed Fix Garage,69216,Routine check
+183,102,2023-03-25,General Servicing,6341,Elite Auto Service,148024,Under warranty
+184,102,2025-07-26,General Servicing,2343,Elite Auto Service,39811,
+185,102,2024-12-16,Engine Oil Change,3837,City Service Center,48357,Routine check
+186,102,2025-11-07,Full Inspection,4969,Rangpur Vehicle Clinic,56678,
+187,103,2025-05-02,Engine Oil Change,4533,Speed Fix Garage,25721,Customer requested
+188,103,2023-02-23,Tire Replacement,11662,Elite Auto Service,32979,Under warranty
+189,104,2024-10-24,Brake Service,973,Dhaka Auto Care,121647,Under warranty
+190,105,2026-05-01,Battery Replacement,595,City Service Center,12494,Under warranty
+191,105,2024-10-27,Battery Replacement,12531,Rangpur Vehicle Clinic,34900,Routine check
+192,105,2023-04-10,Full Inspection,11045,City Service Center,85717,
+193,107,2023-07-09,General Servicing,4680,Chattogram Motor Works,63935,Under warranty
+194,107,2023-07-02,Engine Oil Change,14464,Chattogram Motor Works,43713,Under warranty
+195,107,2025-04-04,Tire Replacement,11103,Elite Auto Service,41405,
+196,107,2024-09-03,General Servicing,13625,Speed Fix Garage,82291,Routine check
+197,108,2025-01-22,AC Repair,3774,Speed Fix Garage,117770,Under warranty
+198,109,2023-07-04,Full Inspection,7422,City Service Center,49852,Under warranty
+199,109,2026-07-15,General Servicing,2022,Dhaka Auto Care,135569,Customer requested
+200,109,2025-08-07,Battery Replacement,4173,Elite Auto Service,41650,Under warranty
+201,109,2025-12-15,Battery Replacement,11104,Rangpur Vehicle Clinic,23012,Customer requested
+202,110,2025-09-05,Tire Replacement,2934,Chattogram Motor Works,79750,Routine check
+203,111,2026-03-10,Engine Oil Change,9527,Dhaka Auto Care,12821,
+204,111,2025-11-11,General Servicing,7266,Dhaka Auto Care,122806,Customer requested
+205,111,2024-12-28,Tire Replacement,10093,Dhaka Auto Care,132974,
+206,112,2024-01-03,Full Inspection,3485,Speed Fix Garage,12864,
+207,112,2025-05-02,Battery Replacement,5376,City Service Center,120275,Under warranty
+208,112,2026-07-01,Full Inspection,4842,City Service Center,50071,Routine check
+209,112,2024-01-15,Engine Oil Change,12739,Rangpur Vehicle Clinic,68978,
+210,113,2023-01-12,General Servicing,2411,Dhaka Auto Care,46019,Under warranty
+211,114,2026-05-17,Battery Replacement,8474,City Service Center,95562,Under warranty
+212,114,2024-09-11,Engine Oil Change,2549,Chattogram Motor Works,4637,Routine check
+213,114,2023-08-18,Full Inspection,760,Elite Auto Service,50341,
+214,114,2024-03-04,General Servicing,11127,Chattogram Motor Works,64381,Under warranty
+215,117,2024-09-08,Full Inspection,8092,Chattogram Motor Works,125253,Under warranty
+216,118,2023-11-09,Battery Replacement,12011,Speed Fix Garage,128152,Under warranty
+217,118,2023-02-10,Full Inspection,7864,Rangpur Vehicle Clinic,64603,Routine check
+218,119,2023-04-15,Tire Replacement,629,Dhaka Auto Care,114190,Under warranty
+219,119,2025-10-12,Battery Replacement,9980,Rangpur Vehicle Clinic,146307,Customer requested
+220,119,2023-03-17,General Servicing,7048,Speed Fix Garage,135573,Under warranty
+221,119,2024-04-19,Battery Replacement,1494,Rangpur Vehicle Clinic,5985,Under warranty
+222,120,2024-07-02,Battery Replacement,7334,Speed Fix Garage,31655,Under warranty
+223,121,2025-07-07,Battery Replacement,7647,Dhaka Auto Care,43292,Customer requested
+224,121,2024-01-29,General Servicing,6133,Speed Fix Garage,61844,Routine check
+225,121,2026-04-18,Battery Replacement,6056,Rangpur Vehicle Clinic,123805,Routine check
+226,124,2025-01-07,Full Inspection,8238,Chattogram Motor Works,55318,Customer requested
+227,124,2023-06-26,Battery Replacement,8411,Chattogram Motor Works,46427,Routine check
+228,124,2023-11-17,AC Repair,8563,Dhaka Auto Care,110047,Under warranty
+229,124,2024-09-13,Brake Service,3931,Rangpur Vehicle Clinic,13333,
+230,125,2025-01-01,Battery Replacement,3098,Chattogram Motor Works,132983,
+231,125,2023-05-11,Tire Replacement,7555,Dhaka Auto Care,60425,
+232,125,2026-02-24,Brake Service,8468,City Service Center,90213,Customer requested
+233,128,2025-11-21,AC Repair,11468,Dhaka Auto Care,14217,Under warranty
+234,128,2025-07-25,Full Inspection,12882,Dhaka Auto Care,28758,
+235,130,2023-12-09,Battery Replacement,2434,Chattogram Motor Works,95801,Routine check
+236,134,2023-11-12,Battery Replacement,6459,City Service Center,37116,
+237,136,2023-01-14,Brake Service,14177,Speed Fix Garage,90475,Customer requested
+238,136,2025-10-31,Brake Service,1896,City Service Center,98631,Under warranty
+239,136,2025-01-08,Battery Replacement,11395,Chattogram Motor Works,40743,Under warranty
+240,136,2024-04-12,Brake Service,13636,Speed Fix Garage,109372,Under warranty
+241,139,2023-03-02,General Servicing,2885,Dhaka Auto Care,136619,
+242,139,2023-06-23,Tire Replacement,5657,Speed Fix Garage,44076,Under warranty
+243,139,2023-05-06,General Servicing,12938,Dhaka Auto Care,40571,
+244,145,2024-10-04,Tire Replacement,629,City Service Center,139357,Routine check
+245,145,2025-04-07,General Servicing,11049,Chattogram Motor Works,143717,Under warranty
+246,145,2024-12-08,Full Inspection,13305,Elite Auto Service,107038,Routine check
+247,147,2025-03-09,Battery Replacement,12278,Elite Auto Service,34031,Customer requested
+248,147,2024-03-13,Engine Oil Change,8883,Rangpur Vehicle Clinic,82855,Customer requested
+249,147,2026-07-25,Brake Service,883,Dhaka Auto Care,142540,Customer requested
+250,148,2025-05-15,AC Repair,2309,Elite Auto Service,16714,Customer requested
+251,148,2024-06-15,Battery Replacement,8814,City Service Center,33456,
+252,148,2023-09-13,General Servicing,5381,Rangpur Vehicle Clinic,2366,Under warranty
+253,149,2026-04-06,AC Repair,12208,Elite Auto Service,140798,Routine check
+254,149,2024-12-18,Tire Replacement,5161,Elite Auto Service,37692,Under warranty
+255,150,2023-08-04,Tire Replacement,8961,Rangpur Vehicle Clinic,51477,Customer requested
+256,150,2025-07-19,Engine Oil Change,2901,Elite Auto Service,112592,Under warranty

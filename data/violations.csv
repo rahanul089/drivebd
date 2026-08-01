@@ -1,0 +1,301 @@
+id,vehicle_id,violation_type,date,location,latitude,longitude,fine_amount,status,officer_name,notes
+1,97,Route Permit Violation,2025-02-17,Khulna - Sarah Island,22.804169411763674,89.55216158902599,3500,paid,Officer Nasrin Hossain,Repeat offense
+2,40,Route Permit Violation,2024-10-10,Khulna - Suzanne Radial,22.83167002281141,89.49945204286962,3500,paid,Officer Jesmin Molla,Repeat offense
+3,27,Over Speeding,2025-07-08,Chattogram - Karen Station,22.362598503222124,91.78444408484104,2000,unpaid,Officer Rafiq Molla,Vehicle impounded briefly
+4,24,Fake Registration Plate,2025-02-27,Gazipur - Hickman Hills,23.951134061488396,90.4116810069768,10000,paid,Officer Lutfa Akter,Vehicle impounded briefly
+5,134,Over Speeding,2024-07-04,Rangpur - Anne Port,25.724013126537507,89.27451239422108,2000,unpaid,Officer Imran Miah,Issued via mobile court
+6,77,Overloading,2024-05-20,Chattogram - Rhodes Plains,22.378989945245557,91.78278024367228,5000,paid,Officer Jesmin Ahmed,First offense
+7,78,No Helmet,2026-06-24,Rangpur - Reyes Streets,25.731888995614703,89.31141983105655,500,unpaid,Officer Imran Khan,Repeat offense
+8,83,Fake Registration Plate,2023-12-30,Rajshahi - Krystal Spurs,24.42095746230948,88.65107252217467,10000,paid,Officer Rezaul Akter,Repeat offense
+9,97,Illegal Parking,2026-02-28,Rangpur - Vincent Key,25.71388000487106,89.32492649257304,800,paid,Officer Delwar Islam,Issued via mobile court
+10,54,Overloading,2023-05-22,Sylhet - Connor Fort,24.926796556800447,91.8982656835996,5000,appealed,Officer Rezaul Khan,Repeat offense
+11,62,Illegal Parking,2025-02-11,Khulna - Matthew Trafficway,22.80299651355823,89.5893700614437,800,paid,Officer Tanvir Sheikh,Vehicle impounded briefly
+12,10,Fitness Certificate Expired,2023-06-24,Comilla - Novak Islands,23.42163694252443,91.15572309688449,2500,paid,Officer Rehana Rahman,Vehicle impounded briefly
+13,103,Fitness Certificate Expired,2023-07-21,Rangpur - Cynthia Tunnel,25.719773837040364,89.27626762405251,2500,unpaid,Officer Kamrun Akter,Issued via mobile court
+14,96,Route Permit Violation,2026-04-20,Mymensingh - Henry Knolls,24.766143730572214,90.385374493248,3500,paid,Officer Mahmuda Ahmed,Repeat offense
+15,107,Signal Breaking,2023-10-18,Chattogram - Reynolds Springs,22.341732865232146,91.76750666808435,1000,appealed,Officer Parvin Kazi,Repeat offense
+16,122,Signal Breaking,2025-07-15,Mymensingh - Miller River,24.72899094742177,90.4003264083182,1000,paid,Officer Salma Islam,Repeat offense
+17,28,Tax Token Expired,2024-05-14,Khulna - Yates Station,22.847199390189687,89.54549102898251,2000,appealed,Officer Imran Mia,First offense
+18,104,Tax Token Expired,2025-06-04,Khulna - Christopher Drives,22.835158237812813,89.56403883695461,2000,unpaid,Officer Jesmin Sheikh,Issued via mobile court
+19,2,No Insurance,2023-05-09,Rajshahi - Dawson Roads,24.382234790520187,88.63415023568868,2500,unpaid,Officer Nasima Sarkar,First offense
+20,118,Signal Breaking,2025-09-29,Sylhet - Jodi Island,24.89767150196278,91.88261085856662,1000,paid,Officer Halima Bhuiyan,Vehicle impounded briefly
+21,30,Fitness Certificate Expired,2026-06-18,Barishal - Rodriguez Avenue,22.668252751301033,90.37085888623147,2500,appealed,Officer Halima Hossain,First offense
+22,81,Signal Breaking,2024-01-10,Rajshahi - Wallace Trace,24.361830607096433,88.5683358543268,1000,unpaid,Officer Saiful Khan,Vehicle impounded briefly
+23,99,Route Permit Violation,2026-01-05,Khulna - Garcia Corners,22.864943292652935,89.55482600950799,3500,paid,Officer Lutfa Chowdhury,Issued via mobile court
+24,74,Over Speeding,2025-07-12,Khulna - Ryan Point,22.857540997878917,89.57685222308564,2000,unpaid,Officer Mahmuda Khan,First offense
+25,99,Using Mobile While Driving,2025-04-17,Comilla - Garcia Corners,23.479169667056,91.1724630435274,1500,paid,Officer Mahmuda Chowdhury,
+26,145,No Helmet,2024-07-16,Rajshahi - Spencer Ranch,24.34698434166432,88.58306703101412,500,unpaid,Officer Kamrun Kazi,Vehicle impounded briefly
+27,131,Signal Breaking,2026-01-17,Gazipur - Shields Bridge,24.032228280799757,90.40698617721054,1000,unpaid,Officer Rashida Mia,Vehicle impounded briefly
+28,56,Route Permit Violation,2024-05-21,Chattogram - Gutierrez Tunnel,22.336670893510288,91.83313126692788,3500,paid,Officer Shakil Hossain,Issued via mobile court
+29,31,No Valid License,2026-04-19,Rajshahi - Jenny Points,24.39341335871118,88.64030486962703,3000,appealed,Officer Roksana Chowdhury,Vehicle impounded briefly
+30,36,No Valid License,2026-03-13,Rajshahi - Ashley Extension,24.359581547895285,88.58230850187903,3000,appealed,Officer Rubina Talukder,Repeat offense
+31,147,Illegal Parking,2023-07-15,Comilla - Jackson Grove,23.4242588906428,91.20590941364891,800,waived,Officer Mohammad Miah,First offense
+32,34,No Valid License,2024-05-21,Khulna - Adams Drive,22.871747358747985,89.55792345537,3000,paid,Officer Mizanur Miah,Issued via mobile court
+33,97,Overloading,2023-07-10,Chattogram - Gary Harbor,22.34718507733018,91.8081802382873,5000,paid,Officer Nasima Mia,Issued via mobile court
+34,84,Fake Registration Plate,2023-07-10,Dhaka - Evans Tunnel,23.833393193748705,90.40834492566796,10000,appealed,Officer Nasima Hossain,Vehicle impounded briefly
+35,102,No Valid License,2025-10-10,Rangpur - Michael Gateway,25.720753683831443,89.30803436170488,3000,appealed,Officer Mizanur Khan,Vehicle impounded briefly
+36,125,Fitness Certificate Expired,2026-07-06,Dhaka - Wheeler Flat,23.83868897618406,90.40845817626735,2500,unpaid,Officer Shahidul Mia,Issued via mobile court
+37,1,Route Permit Violation,2023-09-28,Rajshahi - Rodriguez Hollow,24.4127147764042,88.58438655043764,3500,waived,Officer Farzana Hossain,Repeat offense
+38,65,Signal Breaking,2023-12-05,Barishal - Stacy Isle,22.656178727504866,90.36606042741649,1000,paid,Officer Ayesha Sheikh,
+39,25,No Helmet,2023-09-29,Rajshahi - Brock Isle,24.383867949684106,88.60614442546367,500,paid,Officer Abdul Sarkar,
+40,109,No Insurance,2024-04-13,Khulna - Cook Via,22.833906992567577,89.5633763381764,2500,paid,Officer Rakibul Molla,Repeat offense
+41,36,Route Permit Violation,2023-10-20,Khulna - Kevin Rapids,22.80244116075226,89.54662912144697,3500,paid,Officer Rehana Mia,Repeat offense
+42,55,Tax Token Expired,2026-06-15,Khulna - Timothy Fall,22.864256616987575,89.57629625246021,2000,appealed,Officer Kamal Khan,
+43,99,Fitness Certificate Expired,2023-10-14,Rangpur - Novak Highway,25.718678637496357,89.28966205681878,2500,unpaid,Officer Saiful Talukder,
+44,78,No Valid License,2024-01-22,Comilla - Faulkner Tunnel,23.485484364098124,91.1604542051242,3000,paid,Officer Habibur Kazi,Issued via mobile court
+45,29,No Valid License,2023-05-26,Mymensingh - Mark Harbors,24.74992865009362,90.46806969478433,3000,paid,Officer Rubina Khan,Issued via mobile court
+46,146,Route Permit Violation,2023-12-20,Barishal - Diaz Port,22.72727259378956,90.39894529839408,3500,paid,Officer Fatema Hossain,
+47,68,No Valid License,2025-03-26,Dhaka - Brittany Plains,23.810961060427495,90.42535706960605,3000,appealed,Officer Roksana Sheikh,Issued via mobile court
+48,22,Tax Token Expired,2023-11-09,Comilla - Erin Plaza,23.438446773573457,91.16189068856166,2000,paid,Officer Taslima Khan,Vehicle impounded briefly
+49,84,Route Permit Violation,2023-05-16,Gazipur - Stephanie Mountain,23.980916949339715,90.41404860430505,3500,paid,Officer Ayesha Rahman,First offense
+50,23,Route Permit Violation,2026-05-31,Chattogram - Samuel Highway,22.312402861968643,91.79980795788592,3500,paid,Officer Rehana Ahmed,
+51,36,No Insurance,2024-12-11,Dhaka - Lori Underpass,23.812600536272843,90.44079871015437,2500,unpaid,Officer Rehana Molla,First offense
+52,69,No Insurance,2023-03-02,Chattogram - Chambers Dam,22.34040110263162,91.77613245693443,2500,paid,Officer Farzana Hossain,Issued via mobile court
+53,117,Using Mobile While Driving,2026-03-06,Barishal - Allen Shoals,22.667688139265543,90.31923099811011,1500,unpaid,Officer Kamrun Ahmed,First offense
+54,131,No Helmet,2023-01-26,Dhaka - Jennifer Turnpike,23.78475514503567,90.40967645895776,500,appealed,Officer Jahangir Chowdhury,
+55,142,No Insurance,2024-05-23,Rangpur - Jones Rapid,25.735525659850133,89.29722879214282,2500,unpaid,Officer Rafiq Molla,
+56,129,Tax Token Expired,2025-11-22,Dhaka - Aguilar Place,23.85844138639415,90.45790794074604,2000,unpaid,Officer Fahim Talukder,Repeat offense
+57,84,Signal Breaking,2025-01-25,Comilla - Stephens Turnpike,23.430767115345294,91.18728067408242,1000,paid,Officer Saiful Akter,Issued via mobile court
+58,95,Fake Registration Plate,2024-02-05,Mymensingh - Miles Valleys,24.770346333673928,90.42495592426097,10000,waived,Officer Shirin Islam,Issued via mobile court
+59,7,No Valid License,2023-01-20,Comilla - Daniel Gateway,23.505799026214344,91.13104620405355,3000,unpaid,Officer Sultana Ahmed,First offense
+60,136,No Valid License,2023-05-03,Rangpur - Jackson Ridge,25.79115592359674,89.2394373485205,3000,paid,Officer Mohammad Akter,Vehicle impounded briefly
+61,106,No Insurance,2023-06-23,Barishal - Anna Rue,22.709077062737627,90.35404277638608,2500,paid,Officer Shahnaz Hossain,Vehicle impounded briefly
+62,146,No Helmet,2023-09-25,Rangpur - Rasmussen Isle,25.71757717347419,89.25129909389236,500,paid,Officer Tanvir Sarkar,Repeat offense
+63,116,Illegal Parking,2024-02-20,Rajshahi - Rodriguez Courts,24.338111184641672,88.63121466201598,800,unpaid,Officer Kamal Chowdhury,Issued via mobile court
+64,120,Fitness Certificate Expired,2025-01-03,Rangpur - Walker Summit,25.790363472225025,89.24596362256104,2500,unpaid,Officer Nazrul Ahmed,
+65,41,Tax Token Expired,2026-05-20,Sylhet - Sean Lock,24.848932980810865,91.9022924750988,2000,appealed,Officer Rafiq Akter,Repeat offense
+66,102,Using Mobile While Driving,2024-06-16,Dhaka - Barton Radial,23.8423089615812,90.3798867732518,1500,paid,Officer Jesmin Akter,
+67,119,Signal Breaking,2023-05-07,Khulna - Michael Burg,22.878637233189465,89.58855672374837,1000,unpaid,Officer Tanvir Molla,
+68,150,Fake Registration Plate,2023-06-03,Sylhet - Garcia Mall,24.84708001827386,91.8251472036047,10000,appealed,Officer Jesmin Khan,
+69,85,Signal Breaking,2023-04-14,Dhaka - Darren Stream,23.777098920872906,90.41988841998067,1000,appealed,Officer Shahnaz Kazi,
+70,98,Tax Token Expired,2024-03-15,Rangpur - Michael Junctions,25.78473042158719,89.25269817690243,2000,unpaid,Officer Jahangir Rahman,Vehicle impounded briefly
+71,63,Tax Token Expired,2026-02-01,Sylhet - Mueller Pike,24.892803092996015,91.82747215510591,2000,paid,Officer Imran Uddin,Vehicle impounded briefly
+72,64,Tax Token Expired,2025-02-22,Comilla - Bailey Court,23.48889157668454,91.16681121098375,2000,paid,Officer Mahmuda Molla,Vehicle impounded briefly
+73,129,Fitness Certificate Expired,2023-02-23,Rangpur - Bowen Mission,25.725787756732938,89.24710201880731,2500,unpaid,Officer Farzana Rahman,Issued via mobile court
+74,136,Fitness Certificate Expired,2023-11-23,Gazipur - Jones Cape,23.959913433730495,90.43598644213762,2500,waived,Officer Mohammad Akter,Vehicle impounded briefly
+75,100,Fitness Certificate Expired,2026-04-28,Khulna - Andrew Junctions,22.827400436829187,89.56411051011207,2500,unpaid,Officer Mizanur Islam,Repeat offense
+76,146,Fake Registration Plate,2024-01-21,Khulna - Erica Expressway,22.879269684073336,89.57134011631133,10000,paid,Officer Lutfa Talukder,First offense
+77,126,No Helmet,2026-05-17,Chattogram - Zachary Plaza,22.328780894169157,91.78584485141485,500,unpaid,Officer Saiful Uddin,First offense
+78,88,No Insurance,2024-10-24,Khulna - Mark Meadow,22.801555596284505,89.50507120189862,2500,appealed,Officer Shirin Ahmed,Vehicle impounded briefly
+79,94,Signal Breaking,2025-03-21,Barishal - Hall Lodge,22.70960166631716,90.33715610711408,1000,paid,Officer Shahidul Sheikh,Issued via mobile court
+80,82,Over Speeding,2026-06-10,Comilla - Jacob Shoals,23.489399179259557,91.15322372139806,2000,paid,Officer Rehana Bhuiyan,Repeat offense
+81,76,Over Speeding,2026-03-19,Khulna - Foster Street,22.83476014272776,89.58972831305476,2000,paid,Officer Rashida Chowdhury,Vehicle impounded briefly
+82,82,Fake Registration Plate,2023-08-02,Rajshahi - Shannon Meadow,24.418168779355426,88.56826433681486,10000,paid,Officer Ayesha Molla,Repeat offense
+83,43,Tax Token Expired,2024-11-18,Chattogram - Smith Forest,22.35156299340978,91.75972124405628,2000,appealed,Officer Rafiq Molla,Repeat offense
+84,28,No Insurance,2025-06-16,Dhaka - Joshua Squares,23.83355844944988,90.45941018251057,2500,unpaid,Officer Mahmuda Bhuiyan,Repeat offense
+85,140,Route Permit Violation,2026-03-29,Chattogram - Barbara Union,22.371996956311346,91.8019160404217,3500,appealed,Officer Rafiq Rahman,Repeat offense
+86,6,Fitness Certificate Expired,2023-06-01,Sylhet - Michael Flat,24.87908082011499,91.90749312677343,2500,waived,Officer Rafiq Hossain,Repeat offense
+87,124,No Insurance,2023-12-04,Dhaka - Wilson Skyway,23.82103176256549,90.40592003848933,2500,paid,Officer Rakibul Uddin,First offense
+88,105,No Insurance,2026-01-11,Comilla - Rose Route,23.437226476934995,91.15905230734452,2500,paid,Officer Mohammad Bhuiyan,Vehicle impounded briefly
+89,141,Overloading,2023-01-08,Khulna - Harper Ridge,22.83836059574457,89.51975494489662,5000,unpaid,Officer Halima Kazi,First offense
+90,25,No Helmet,2024-08-20,Rajshahi - Matthews Keys,24.422205769599927,88.6015570651142,500,unpaid,Officer Tanvir Kazi,Issued via mobile court
+91,68,Signal Breaking,2025-01-29,Comilla - Bruce River,23.49924926927495,91.16784016649319,1000,paid,Officer Nazrul Mia,Issued via mobile court
+92,68,No Valid License,2023-11-06,Sylhet - Lisa Squares,24.92012351421153,91.88544684591346,3000,paid,Officer Shakil Sheikh,Vehicle impounded briefly
+93,59,Using Mobile While Driving,2025-12-06,Dhaka - Sellers Ramp,23.802163207493447,90.4160514411979,1500,appealed,Officer Mahmuda Akter,Issued via mobile court
+94,77,Signal Breaking,2023-03-13,Rangpur - Emily Island,25.74411014703156,89.31524550614716,1000,appealed,Officer Halima Khan,
+95,115,Over Speeding,2024-01-30,Khulna - John Crescent,22.808218599863856,89.53263748993156,2000,waived,Officer Roksana Uddin,First offense
+96,67,Fitness Certificate Expired,2026-02-13,Chattogram - Nathaniel Divide,22.346635499435703,91.76581268053697,2500,unpaid,Officer Fahim Islam,Vehicle impounded briefly
+97,134,Route Permit Violation,2023-10-31,Chattogram - Barnes Dam,22.36355939270551,91.79146770868776,3500,paid,Officer Salma Ahmed,Vehicle impounded briefly
+98,26,Illegal Parking,2025-04-21,Comilla - Henderson Oval,23.437113663017037,91.19637876707135,800,appealed,Officer Mahmuda Rahman,First offense
+99,71,Route Permit Violation,2025-04-02,Khulna - Angela Overpass,22.799478253248182,89.57925742139143,3500,paid,Officer Habibur Rahman,Issued via mobile court
+100,69,Fitness Certificate Expired,2024-09-12,Dhaka - Taylor Island,23.791394929784797,90.44678465686114,2500,unpaid,Officer Salma Akter,First offense
+101,77,No Insurance,2024-10-19,Mymensingh - Harvey Way,24.724041998100876,90.41197727277054,2500,paid,Officer Taslima Mia,First offense
+102,105,No Insurance,2025-02-04,Mymensingh - Crane Oval,24.779201739239845,90.42182697026095,2500,paid,Officer Aminul Bhuiyan,First offense
+103,135,Fake Registration Plate,2024-02-16,Dhaka - James Lights,23.84399766776087,90.38744902613242,10000,unpaid,Officer Shakil Uddin,Repeat offense
+104,95,Overloading,2023-09-11,Comilla - Ortiz Overpass,23.478817436044338,91.15509380945896,5000,paid,Officer Fahim Chowdhury,Issued via mobile court
+105,142,Fitness Certificate Expired,2024-06-13,Barishal - Mckinney Mills,22.725896113448496,90.37238505376159,2500,unpaid,Officer Tanvir Rahman,First offense
+106,147,No Valid License,2024-02-28,Rajshahi - Jackson Port,24.351408357926896,88.59515071964957,3000,paid,Officer Abdul Kazi,First offense
+107,45,Fake Registration Plate,2026-05-30,Dhaka - Laura Forges,23.84080855691955,90.39304596983845,10000,unpaid,Officer Farzana Sheikh,Issued via mobile court
+108,90,Overloading,2024-09-10,Sylhet - Johnson Fork,24.912619615638732,91.90113108214707,5000,unpaid,Officer Kamal Islam,Vehicle impounded briefly
+109,96,Using Mobile While Driving,2024-09-03,Gazipur - Jackson Mount,24.01834131358572,90.41847384188162,1500,paid,Officer Nazrul Sarkar,Repeat offense
+110,67,Tax Token Expired,2025-11-25,Sylhet - Dunn Creek,24.921447438830363,91.90866870447455,2000,unpaid,Officer Halima Bhuiyan,Repeat offense
+111,36,No Insurance,2024-08-28,Dhaka - Joseph Plains,23.7862426272712,90.40435656860812,2500,paid,Officer Mohammad Uddin,Repeat offense
+112,57,Tax Token Expired,2025-09-01,Comilla - Weaver Throughway,23.501352650550505,91.19808684759623,2000,paid,Officer Rehana Chowdhury,Repeat offense
+113,25,Overloading,2026-02-18,Khulna - Kathleen Mill,22.87189182183193,89.50860683570126,5000,paid,Officer Rubina Hossain,First offense
+114,91,No Valid License,2024-11-09,Sylhet - Veronica Cove,24.882068242976487,91.8772570695207,3000,paid,Officer Kamal Kazi,
+115,150,Fake Registration Plate,2024-02-03,Gazipur - Kenneth Bypass,23.999947737449272,90.45704977546983,10000,unpaid,Officer Aminul Sheikh,
+116,39,Over Speeding,2026-03-12,Rajshahi - Baker Wall,24.413784512331056,88.65286492558836,2000,unpaid,Officer Shahidul Hossain,Issued via mobile court
+117,86,Tax Token Expired,2023-04-29,Khulna - Scott Crest,22.7960713501424,89.51765278622015,2000,unpaid,Officer Rehana Chowdhury,Issued via mobile court
+118,23,Over Speeding,2025-05-29,Gazipur - Jason Street,23.990239348039797,90.46683278401301,2000,paid,Officer Mohammad Uddin,Repeat offense
+119,4,Fitness Certificate Expired,2023-01-09,Comilla - Callahan Ridge,23.47336869286716,91.15578231228758,2500,unpaid,Officer Nasima Talukder,First offense
+120,27,Route Permit Violation,2023-12-09,Comilla - Martin Dam,23.417228702247026,91.13547183517382,3500,paid,Officer Jesmin Sarkar,Issued via mobile court
+121,35,Fitness Certificate Expired,2024-01-21,Mymensingh - Lisa Valley,24.71358835088915,90.46098942361937,2500,paid,Officer Fatema Akter,First offense
+122,34,No Valid License,2023-12-13,Dhaka - Ashley Place,23.772616198175097,90.43361100900958,3000,paid,Officer Shahnaz Miah,Vehicle impounded briefly
+123,13,Fake Registration Plate,2023-02-10,Dhaka - Carlson Extension,23.765123505647296,90.37407898263392,10000,paid,Officer Kamal Miah,Issued via mobile court
+124,40,No Valid License,2023-07-26,Dhaka - Werner Highway,23.826548296588893,90.38949771495372,3000,unpaid,Officer Shirin Sheikh,
+125,131,No Insurance,2023-08-22,Gazipur - Armstrong Walks,24.02837600661685,90.42007390631932,2500,unpaid,Officer Farzana Uddin,Repeat offense
+126,105,Illegal Parking,2025-10-13,Khulna - Derek Terrace,22.8866356627462,89.55912039154553,800,unpaid,Officer Habibur Islam,
+127,23,Signal Breaking,2023-11-02,Gazipur - Sellers Harbor,24.04484460157311,90.44825262225844,1000,paid,Officer Kamal Miah,First offense
+128,117,Illegal Parking,2023-07-24,Sylhet - Jacqueline Curve,24.92621784139179,91.90611404491622,800,paid,Officer Nasima Sarkar,Issued via mobile court
+129,30,Signal Breaking,2023-10-11,Dhaka - Dustin Islands,23.826635502749085,90.37955122763563,1000,unpaid,Officer Fahim Miah,
+130,96,Fitness Certificate Expired,2025-03-30,Khulna - Kathleen Springs,22.891830993014977,89.51748330907502,2500,unpaid,Officer Rezaul Sheikh,First offense
+131,29,Over Speeding,2023-11-23,Dhaka - Burns Ports,23.77067131057384,90.45362267612721,2000,waived,Officer Mizanur Mia,First offense
+132,98,Fitness Certificate Expired,2023-09-25,Gazipur - Burton Lane,23.99820796563655,90.41911227769921,2500,unpaid,Officer Jesmin Rahman,
+133,67,Tax Token Expired,2025-12-10,Barishal - Jones Underpass,22.72775287182899,90.36116490081234,2000,unpaid,Officer Rubina Ahmed,Issued via mobile court
+134,64,Overloading,2025-02-27,Barishal - Richard Summit,22.665865445225712,90.38614378201838,5000,paid,Officer Halima Rahman,
+135,41,Using Mobile While Driving,2023-12-05,Mymensingh - Neal Wells,24.7045865242477,90.41946479611444,1500,appealed,Officer Nazrul Rahman,Vehicle impounded briefly
+136,58,Using Mobile While Driving,2024-04-26,Rangpur - Gibson Oval,25.70178305957548,89.26961888764595,1500,paid,Officer Nasrin Kazi,Issued via mobile court
+137,81,Signal Breaking,2023-02-06,Mymensingh - Perkins Ways,24.707364332148014,90.41153385476755,1000,paid,Officer Fatema Hossain,Vehicle impounded briefly
+138,78,Using Mobile While Driving,2025-07-23,Comilla - Jessica Mount,23.505735512999337,91.16723424775698,1500,unpaid,Officer Habibur Mia,Repeat offense
+139,144,Fake Registration Plate,2025-01-14,Gazipur - Horn Underpass,24.021491350028317,90.38170233583557,10000,paid,Officer Ayesha Islam,Repeat offense
+140,91,Tax Token Expired,2025-02-04,Sylhet - Robinson Meadow,24.915109605326,91.8232778109855,2000,paid,Officer Jahangir Sheikh,
+141,66,Fake Registration Plate,2025-03-15,Rajshahi - Troy Islands,24.346058950436895,88.63665541437076,10000,unpaid,Officer Rakibul Ahmed,Issued via mobile court
+142,12,Tax Token Expired,2025-07-11,Gazipur - Morgan Ports,23.995638787694617,90.4292316166611,2000,unpaid,Officer Mahmuda Islam,Vehicle impounded briefly
+143,13,Using Mobile While Driving,2025-09-16,Rangpur - Ashlee Oval,25.786337087378154,89.30330814970819,1500,appealed,Officer Kamrun Chowdhury,First offense
+144,27,Route Permit Violation,2024-10-21,Gazipur - Shannon Track,24.000311011935317,90.40876626387437,3500,paid,Officer Ayesha Miah,Issued via mobile court
+145,88,Illegal Parking,2023-10-10,Mymensingh - Brandon Road,24.738374547280763,90.4403014284897,800,appealed,Officer Sultana Sarkar,Vehicle impounded briefly
+146,56,No Valid License,2024-08-18,Rajshahi - Smith Walks,24.393161129731904,88.64631917644172,3000,paid,Officer Shahidul Sarkar,
+147,91,Using Mobile While Driving,2025-05-04,Mymensingh - Scott Alley,24.764524348553916,90.45968660013779,1500,paid,Officer Roksana Islam,Vehicle impounded briefly
+148,28,No Helmet,2023-04-26,Rangpur - Harris Spurs,25.71389024172647,89.30021850186701,500,unpaid,Officer Aminul Miah,First offense
+149,16,No Insurance,2026-01-13,Sylhet - Nicole Hollow,24.848130638324232,91.90010262175545,2500,unpaid,Officer Delwar Akter,Vehicle impounded briefly
+150,100,No Valid License,2024-08-12,Comilla - Nancy Wells,23.479993607521426,91.13559798812753,3000,paid,Officer Imran Sarkar,Vehicle impounded briefly
+151,14,No Helmet,2025-06-26,Sylhet - Davis Lake,24.927898348195516,91.90984863770738,500,unpaid,Officer Nasima Uddin,First offense
+152,76,Overloading,2023-06-02,Khulna - Miller Shores,22.814297658153233,89.50767951318554,5000,waived,Officer Shahnaz Rahman,Issued via mobile court
+153,72,Using Mobile While Driving,2026-04-11,Sylhet - Brett Road,24.929501419609053,91.81926451360178,1500,unpaid,Officer Jahangir Rahman,First offense
+154,83,Fake Registration Plate,2026-07-04,Dhaka - Barber Throughway,23.821860867609935,90.42868902109649,10000,paid,Officer Mizanur Molla,
+155,82,Using Mobile While Driving,2025-12-02,Rajshahi - Ruben Course,24.331317646910446,88.60471403504563,1500,waived,Officer Delwar Bhuiyan,
+156,90,No Valid License,2024-11-09,Rajshahi - Aaron Neck,24.360579782466274,88.57604452857846,3000,paid,Officer Parvin Kazi,Vehicle impounded briefly
+157,3,Signal Breaking,2026-06-10,Barishal - David Fork,22.74286072991873,90.32788271638668,1000,paid,Officer Rakibul Bhuiyan,
+158,99,Illegal Parking,2023-02-20,Comilla - Smith Square,23.501833592662862,91.21311090642399,800,paid,Officer Golam Mia,Issued via mobile court
+159,12,Illegal Parking,2023-06-18,Rajshahi - Montoya Wall,24.419321181964843,88.57093948092135,800,unpaid,Officer Lutfa Islam,
+160,54,Tax Token Expired,2025-05-18,Rajshahi - Benson Neck,24.40806650777454,88.5747579567982,2000,appealed,Officer Roksana Hossain,First offense
+161,7,Overloading,2023-05-31,Barishal - Jeremy Corners,22.656426807089144,90.38292147869758,5000,unpaid,Officer Kamrun Akter,Repeat offense
+162,105,Route Permit Violation,2025-06-05,Mymensingh - Dakota Land,24.728740424591965,90.40925018672444,3500,paid,Officer Abdul Hossain,Vehicle impounded briefly
+163,12,No Insurance,2025-10-26,Chattogram - Taylor Trail,22.317513554187,91.81188918976625,2500,paid,Officer Rafiq Talukder,Issued via mobile court
+164,98,Route Permit Violation,2025-12-28,Dhaka - Darlene Springs,23.782286572546052,90.43717539116068,3500,paid,Officer Lutfa Talukder,First offense
+165,77,Tax Token Expired,2023-01-23,Barishal - Casey Port,22.70635241877643,90.35900697456402,2000,waived,Officer Abdul Bhuiyan,Vehicle impounded briefly
+166,141,Signal Breaking,2024-12-05,Sylhet - Chelsey Expressway,24.866073694292197,91.90926280303444,1000,unpaid,Officer Shirin Chowdhury,First offense
+167,57,Fake Registration Plate,2024-01-07,Sylhet - Bell Forest,24.911997791135057,91.87542926444729,10000,unpaid,Officer Delwar Mia,Vehicle impounded briefly
+168,19,Illegal Parking,2024-02-09,Chattogram - Samantha Ridges,22.379458925733413,91.78191904101337,800,unpaid,Officer Jahangir Akter,
+169,73,Fake Registration Plate,2024-10-12,Chattogram - Heath Corners,22.35548612302739,91.76603460782195,10000,appealed,Officer Kamrun Khan,Vehicle impounded briefly
+170,146,Fitness Certificate Expired,2023-12-12,Barishal - Donald Crossing,22.651483188266468,90.32811751385455,2500,waived,Officer Imran Miah,Repeat offense
+171,35,Tax Token Expired,2025-08-05,Barishal - Bell Meadow,22.695535797356623,90.38097669615259,2000,appealed,Officer Kamal Chowdhury,Vehicle impounded briefly
+172,21,Illegal Parking,2024-02-07,Khulna - Moody Gateway,22.82192346505936,89.57893358320788,800,appealed,Officer Rafiq Islam,Vehicle impounded briefly
+173,8,Fake Registration Plate,2026-04-23,Gazipur - Newman Gateway,23.97117606861763,90.37396563093036,10000,paid,Officer Delwar Kazi,First offense
+174,94,Route Permit Violation,2026-04-22,Rajshahi - Maxwell Spurs,24.39782268272129,88.58329991602145,3500,appealed,Officer Golam Hossain,Issued via mobile court
+175,94,Using Mobile While Driving,2026-06-11,Dhaka - Melanie Shoals,23.82871616568405,90.43822060712735,1500,paid,Officer Shahidul Chowdhury,Vehicle impounded briefly
+176,145,Tax Token Expired,2025-09-17,Khulna - Harris Rest,22.88951752582699,89.49434198260518,2000,paid,Officer Ayesha Hossain,Repeat offense
+177,95,No Valid License,2025-11-26,Dhaka - Julie Hill,23.851072609257297,90.39862513645596,3000,paid,Officer Fahim Rahman,
+178,83,Signal Breaking,2024-07-14,Comilla - Kristen Underpass,23.49418722662174,91.15723160693841,1000,paid,Officer Rehana Bhuiyan,Issued via mobile court
+179,94,Fake Registration Plate,2025-02-09,Chattogram - Troy Creek,22.404167410835058,91.75548992545333,10000,paid,Officer Shakil Kazi,Issued via mobile court
+180,2,Using Mobile While Driving,2024-04-16,Khulna - Victor Ranch,22.803308822574127,89.55464770023883,1500,paid,Officer Shahidul Chowdhury,Repeat offense
+181,31,Tax Token Expired,2024-11-07,Rajshahi - Allison Bridge,24.396525565887497,88.60235166493895,2000,paid,Officer Anisur Chowdhury,Issued via mobile court
+182,6,No Valid License,2026-04-28,Dhaka - Peck Curve,23.776412914036754,90.42545404248881,3000,unpaid,Officer Mizanur Khan,
+183,43,Illegal Parking,2025-04-10,Khulna - Valencia Port,22.855535752279494,89.54666047023358,800,paid,Officer Aminul Hossain,First offense
+184,115,Fake Registration Plate,2023-12-16,Mymensingh - Diaz Springs,24.719036381481857,90.41137668519082,10000,appealed,Officer Mizanur Chowdhury,Vehicle impounded briefly
+185,131,Illegal Parking,2024-12-02,Khulna - Kathryn Trail,22.887835194484495,89.54995333624974,800,paid,Officer Tanvir Bhuiyan,First offense
+186,28,No Helmet,2025-10-29,Rajshahi - Alvin Cliff,24.392936783119886,88.63685141855893,500,paid,Officer Rehana Kazi,Vehicle impounded briefly
+187,10,Using Mobile While Driving,2023-07-10,Comilla - Jose Canyon,23.458924093511246,91.14393288407771,1500,paid,Officer Fatema Sheikh,Vehicle impounded briefly
+188,108,Fitness Certificate Expired,2025-05-28,Dhaka - Stacy Locks,23.783248625637906,90.44273001960077,2500,paid,Officer Shahnaz Molla,Vehicle impounded briefly
+189,148,Signal Breaking,2025-09-04,Rangpur - Fuller Parkway,25.770485889035847,89.31620853566754,1000,unpaid,Officer Saiful Sheikh,Repeat offense
+190,49,No Helmet,2023-08-30,Dhaka - Henderson Locks,23.81227618455231,90.40000298817048,500,paid,Officer Rakibul Sheikh,Repeat offense
+191,28,Over Speeding,2024-06-03,Rangpur - Danielle Plain,25.720030289476348,89.27881048908797,2000,paid,Officer Halima Miah,Issued via mobile court
+192,53,Route Permit Violation,2025-09-15,Comilla - Joshua Inlet,23.428571959783294,91.18680938296535,3500,paid,Officer Aminul Molla,Issued via mobile court
+193,36,Tax Token Expired,2025-07-03,Chattogram - William Ford,22.38521092603453,91.82812451784147,2000,paid,Officer Golam Bhuiyan,Repeat offense
+194,141,Fake Registration Plate,2026-07-26,Dhaka - Amanda Lock,23.76082906334726,90.37160885842387,10000,unpaid,Officer Saiful Sheikh,
+195,17,Illegal Parking,2026-06-01,Rajshahi - Kyle Mews,24.32827553382851,88.59263260104261,800,paid,Officer Halima Talukder,Vehicle impounded briefly
+196,15,Over Speeding,2024-02-18,Mymensingh - Brian Corners,24.782156763631765,90.46337584673458,2000,paid,Officer Taslima Rahman,Vehicle impounded briefly
+197,131,Using Mobile While Driving,2023-03-15,Rajshahi - Wilson Ridge,24.360473999827548,88.6197019119384,1500,paid,Officer Nasrin Miah,Issued via mobile court
+198,91,Tax Token Expired,2024-02-15,Rangpur - Kyle Streets,25.74567427009893,89.29889255401464,2000,paid,Officer Rafiq Talukder,Vehicle impounded briefly
+199,150,Fitness Certificate Expired,2024-07-20,Barishal - David Station,22.67362955129621,90.3998057139475,2500,waived,Officer Tanvir Islam,Repeat offense
+200,45,Route Permit Violation,2023-05-29,Comilla - Jacqueline Estates,23.46101691662539,91.16489658944235,3500,unpaid,Officer Golam Miah,Vehicle impounded briefly
+201,148,Illegal Parking,2026-02-27,Mymensingh - Benton Pike,24.745462989552294,90.39462732564023,800,waived,Officer Fahim Mia,Vehicle impounded briefly
+202,8,Overloading,2025-02-22,Chattogram - Jackson Crossroad,22.37026617975582,91.83261980333654,5000,unpaid,Officer Ayesha Sarkar,Issued via mobile court
+203,91,Using Mobile While Driving,2024-06-23,Comilla - Quinn Crest,23.43552576093621,91.1402009430162,1500,unpaid,Officer Rubina Hossain,Vehicle impounded briefly
+204,46,Overloading,2026-03-20,Barishal - Matthew Meadow,22.67790757824688,90.39821181090635,5000,paid,Officer Taslima Kazi,First offense
+205,61,No Insurance,2024-02-28,Rajshahi - Warren Greens,24.347420753212845,88.63769404800661,2500,appealed,Officer Nasima Khan,
+206,31,Signal Breaking,2026-01-13,Mymensingh - Tyler Pass,24.792899309046764,90.4551010595756,1000,paid,Officer Rakibul Kazi,Vehicle impounded briefly
+207,71,Overloading,2025-11-12,Khulna - Brown Walks,22.82362666231832,89.51250927830799,5000,waived,Officer Rashida Sheikh,Issued via mobile court
+208,139,No Helmet,2023-12-24,Comilla - Michael Glens,23.456419603431602,91.14293681804108,500,unpaid,Officer Rubina Islam,
+209,54,Route Permit Violation,2025-01-10,Gazipur - Patricia Spring,24.011177809636177,90.39627007690903,3500,unpaid,Officer Ayesha Miah,Issued via mobile court
+210,88,Fitness Certificate Expired,2024-03-07,Khulna - Jeremy Pass,22.83750929435247,89.56551957633816,2500,paid,Officer Tanvir Miah,Issued via mobile court
+211,47,Fake Registration Plate,2024-04-13,Khulna - Bradley Wall,22.877019066414142,89.56238154594149,10000,waived,Officer Lutfa Sheikh,Issued via mobile court
+212,51,Over Speeding,2023-01-20,Khulna - John Mountains,22.813260727665963,89.54025978261119,2000,paid,Officer Parvin Sarkar,Issued via mobile court
+213,77,Illegal Parking,2023-04-08,Comilla - Reyes Drive,23.45054019018633,91.19995431759605,800,appealed,Officer Nazrul Kazi,
+214,116,No Insurance,2025-01-07,Barishal - Sarah Walks,22.707035003481426,90.39668445757778,2500,unpaid,Officer Abdul Sheikh,
+215,90,Tax Token Expired,2026-03-25,Gazipur - Angela Station,24.01488654831136,90.42414382544051,2000,unpaid,Officer Sultana Molla,Repeat offense
+216,131,Overloading,2025-02-19,Mymensingh - Walker Gateway,24.75846637723932,90.41667520807364,5000,appealed,Officer Rehana Sarkar,Issued via mobile court
+217,147,Route Permit Violation,2024-12-04,Chattogram - Moon Island,22.329721793938788,91.76488782416955,3500,unpaid,Officer Nazrul Bhuiyan,Repeat offense
+218,114,Fitness Certificate Expired,2025-07-11,Gazipur - Mckenzie Ports,23.99129890608737,90.38868861991034,2500,paid,Officer Habibur Miah,
+219,54,Over Speeding,2023-05-11,Rangpur - Wilson Spring,25.787579366170384,89.27251857966515,2000,unpaid,Officer Tanvir Hossain,
+220,68,Fake Registration Plate,2025-03-09,Khulna - Harry Unions,22.826537065355,89.51503965193152,10000,unpaid,Officer Jahangir Khan,Vehicle impounded briefly
+221,44,No Helmet,2024-10-28,Dhaka - Stephanie Cliff,23.846724114164825,90.40921934766693,500,paid,Officer Farzana Mia,First offense
+222,139,Over Speeding,2026-07-16,Gazipur - Cline Trail,24.02479116015721,90.45802937101422,2000,paid,Officer Delwar Talukder,Repeat offense
+223,124,Using Mobile While Driving,2025-06-23,Rajshahi - Murphy Plaza,24.355286818538445,88.59542038055943,1500,appealed,Officer Abdul Islam,Vehicle impounded briefly
+224,35,Fitness Certificate Expired,2023-01-18,Sylhet - Smith Flats,24.913676996375685,91.86789316541177,2500,paid,Officer Sultana Islam,Issued via mobile court
+225,75,Fake Registration Plate,2026-01-27,Rajshahi - Elliott Hollow,24.361864387652705,88.59537358690662,10000,paid,Officer Shahnaz Akter,First offense
+226,100,Route Permit Violation,2025-05-14,Rajshahi - Steven Ramp,24.38703230142561,88.60586100618582,3500,unpaid,Officer Halima Miah,Repeat offense
+227,137,Illegal Parking,2023-05-21,Rangpur - Cuevas Trail,25.712140717900265,89.25415952992913,800,unpaid,Officer Halima Mia,Repeat offense
+228,126,No Valid License,2023-04-12,Barishal - Jessica Plains,22.74797162176294,90.30571308856155,3000,unpaid,Officer Sultana Miah,First offense
+229,113,No Insurance,2023-11-05,Dhaka - Edward Lodge,23.761772484688148,90.38421880851828,2500,unpaid,Officer Rezaul Molla,Issued via mobile court
+230,9,Fitness Certificate Expired,2023-10-27,Chattogram - Jesse Key,22.31250383444019,91.81076529107125,2500,appealed,Officer Rezaul Chowdhury,First offense
+231,65,Route Permit Violation,2024-05-24,Dhaka - Stephanie Alley,23.798779789921067,90.45999722141248,3500,unpaid,Officer Mohammad Uddin,Issued via mobile court
+232,25,Using Mobile While Driving,2024-10-01,Rajshahi - Sweeney Stream,24.418121524664063,88.57006114364056,1500,paid,Officer Lutfa Ahmed,Repeat offense
+233,124,Tax Token Expired,2023-04-17,Sylhet - Garcia Pines,24.93126576657496,91.84047882490552,2000,unpaid,Officer Imran Sarkar,
+234,43,Illegal Parking,2024-05-12,Gazipur - Robert Circle,23.950792985588933,90.3744993369021,800,unpaid,Officer Mahmuda Khan,Repeat offense
+235,23,No Valid License,2026-06-20,Khulna - Jennifer Course,22.82944220967505,89.58726517064942,3000,paid,Officer Rashida Rahman,Repeat offense
+236,40,No Insurance,2023-09-15,Comilla - Samantha Vista,23.459484288192296,91.1625739559037,2500,paid,Officer Nasima Mia,First offense
+237,6,No Insurance,2023-10-03,Rangpur - Haynes Landing,25.71896962411006,89.22914885427154,2500,paid,Officer Lutfa Talukder,Vehicle impounded briefly
+238,126,No Valid License,2024-12-13,Gazipur - Villegas Corner,23.982268087569178,90.41713947211156,3000,unpaid,Officer Halima Chowdhury,
+239,136,Over Speeding,2024-06-23,Mymensingh - William Route,24.751260595213704,90.41570789797956,2000,unpaid,Officer Parvin Bhuiyan,First offense
+240,5,Fake Registration Plate,2024-05-04,Barishal - Jones Port,22.683069409430775,90.30983417565993,10000,paid,Officer Shahnaz Uddin,Vehicle impounded briefly
+241,128,Using Mobile While Driving,2024-10-22,Khulna - Ryan Curve,22.83658045277663,89.52250240556484,1500,paid,Officer Rafiq Rahman,First offense
+242,46,No Helmet,2024-01-28,Rajshahi - Kelly Vista,24.334375358664854,88.61130121813548,500,unpaid,Officer Mahmuda Miah,
+243,94,No Valid License,2023-01-27,Gazipur - Howe Lock,24.042921103680904,90.39117380934935,3000,paid,Officer Rafiq Mia,
+244,93,Using Mobile While Driving,2023-04-30,Rangpur - Stewart Groves,25.77626429662774,89.25178156344967,1500,appealed,Officer Rafiq Talukder,
+245,56,Using Mobile While Driving,2024-04-18,Chattogram - Charles Flats,22.36006610514025,91.75214604131067,1500,unpaid,Officer Ayesha Chowdhury,Vehicle impounded briefly
+246,143,Route Permit Violation,2026-03-26,Chattogram - Kimberly Prairie,22.34269633658714,91.77907205924284,3500,paid,Officer Salma Chowdhury,First offense
+247,141,Route Permit Violation,2023-11-20,Comilla - Eric Expressway,23.464090047698043,91.19089157312736,3500,unpaid,Officer Rubina Sarkar,Repeat offense
+248,106,Tax Token Expired,2024-10-24,Rangpur - Owens Lodge,25.754741337025703,89.28151447028043,2000,appealed,Officer Delwar Miah,Repeat offense
+249,116,Overloading,2023-03-12,Rangpur - Amanda Trail,25.792195647117854,89.28477628266238,5000,unpaid,Officer Sultana Islam,Repeat offense
+250,57,No Valid License,2024-07-19,Barishal - Shannon Mountain,22.742911208297063,90.35462714883411,3000,unpaid,Officer Kamrun Khan,
+251,10,Overloading,2024-06-26,Barishal - Phelps Course,22.687708289302606,90.36171557063598,5000,unpaid,Officer Aminul Hossain,Vehicle impounded briefly
+252,103,Fake Registration Plate,2024-10-26,Rajshahi - Lindsey Hollow,24.40379041943143,88.57149024908564,10000,paid,Officer Kamrun Ahmed,Vehicle impounded briefly
+253,77,No Helmet,2023-04-25,Gazipur - Jason Walks,24.04208714965202,90.40373896444733,500,paid,Officer Roksana Sheikh,
+254,59,No Insurance,2026-07-22,Gazipur - Hernandez Station,24.027641861814406,90.40854869621852,2500,appealed,Officer Mohammad Sarkar,Vehicle impounded briefly
+255,145,Over Speeding,2024-03-28,Barishal - Tanya Locks,22.66631974826047,90.37086352423695,2000,paid,Officer Jesmin Hossain,First offense
+256,111,Illegal Parking,2024-11-19,Rangpur - Erica Green,25.70215451126386,89.28234405905106,800,unpaid,Officer Tanvir Miah,
+257,103,Using Mobile While Driving,2023-09-25,Rangpur - Anthony Lodge,25.77010329196369,89.2732922501976,1500,paid,Officer Tanvir Uddin,Vehicle impounded briefly
+258,135,No Valid License,2025-05-30,Rajshahi - Hawkins Plaza,24.35684116411562,88.64661380808951,3000,unpaid,Officer Imran Sheikh,Repeat offense
+259,90,No Valid License,2023-02-19,Barishal - Cody Cove,22.727968129206314,90.32042552640114,3000,unpaid,Officer Fahim Khan,Issued via mobile court
+260,12,No Valid License,2023-11-16,Rajshahi - David Circle,24.400273378259307,88.63947641451793,3000,paid,Officer Mohammad Akter,Vehicle impounded briefly
+261,38,Illegal Parking,2023-08-16,Dhaka - David View,23.79081180500542,90.40961903037335,800,unpaid,Officer Delwar Uddin,First offense
+262,140,Using Mobile While Driving,2026-06-29,Sylhet - Watson Roads,24.91789235835098,91.8328347420924,1500,paid,Officer Fatema Bhuiyan,Vehicle impounded briefly
+263,135,No Helmet,2024-08-04,Sylhet - Brandi Green,24.864969605700068,91.88835266884712,500,unpaid,Officer Fahim Islam,
+264,100,Tax Token Expired,2025-01-07,Sylhet - Andrew Circles,24.931328227355994,91.82060783239342,2000,paid,Officer Shahnaz Akter,Issued via mobile court
+265,131,No Insurance,2025-09-19,Chattogram - Rachel Mills,22.39357727455281,91.78635606451631,2500,appealed,Officer Golam Mia,Vehicle impounded briefly
+266,6,No Helmet,2024-09-16,Rajshahi - Christopher Vista,24.357856963463078,88.59353998178274,500,appealed,Officer Shakil Molla,Repeat offense
+267,78,No Valid License,2023-05-07,Comilla - Martinez Mountain,23.473279236371575,91.2187677274191,3000,unpaid,Officer Fatema Miah,First offense
+268,39,Fitness Certificate Expired,2023-06-29,Rangpur - Gary Ports,25.766888966392134,89.27727178440735,2500,paid,Officer Ayesha Sheikh,First offense
+269,147,Over Speeding,2026-05-24,Rangpur - Underwood Locks,25.726828473837056,89.27942337512059,2000,waived,Officer Jahangir Uddin,First offense
+270,80,No Insurance,2025-05-30,Comilla - Johnson Springs,23.5102685800232,91.22847769090686,2500,appealed,Officer Mizanur Chowdhury,Repeat offense
+271,18,Using Mobile While Driving,2023-08-31,Comilla - Thompson Forest,23.429113521586057,91.21485225098702,1500,appealed,Officer Abdul Sarkar,Issued via mobile court
+272,106,Illegal Parking,2026-07-28,Mymensingh - Joshua Mission,24.79042500304158,90.39767961646315,800,paid,Officer Salma Khan,First offense
+273,7,Fake Registration Plate,2026-03-07,Gazipur - Austin River,24.011136202143813,90.42993606926215,10000,unpaid,Officer Abdul Molla,
+274,123,Over Speeding,2025-08-18,Comilla - Deborah Parks,23.481901912797664,91.16829594011304,2000,appealed,Officer Mahmuda Kazi,First offense
+275,42,No Valid License,2023-01-31,Rajshahi - Andrade Neck,24.41704350831349,88.649219804249,3000,unpaid,Officer Anisur Uddin,
+276,46,Overloading,2024-10-27,Gazipur - Christopher Lights,24.03657749051567,90.45905869158416,5000,paid,Officer Mohammad Bhuiyan,Repeat offense
+277,101,Fake Registration Plate,2025-12-11,Gazipur - Robert Row,24.01403938244863,90.44071125505188,10000,paid,Officer Kamal Mia,Issued via mobile court
+278,11,No Valid License,2023-03-22,Comilla - Crystal Unions,23.46647009498134,91.18251266830947,3000,paid,Officer Rashida Uddin,Repeat offense
+279,113,Route Permit Violation,2024-08-08,Sylhet - Veronica Tunnel,24.891034716396398,91.86094621824505,3500,paid,Officer Rashida Khan,Issued via mobile court
+280,116,Signal Breaking,2026-04-13,Comilla - Castillo Tunnel,23.504484245769923,91.20051141418398,1000,unpaid,Officer Imran Sarkar,Issued via mobile court
+281,7,Over Speeding,2024-02-18,Mymensingh - Cooper Port,24.785354844736073,90.37931796612895,2000,paid,Officer Shahidul Ahmed,
+282,30,No Insurance,2023-06-24,Mymensingh - Price Falls,24.749481730606615,90.40870873742615,2500,paid,Officer Parvin Chowdhury,Issued via mobile court
+283,141,Route Permit Violation,2024-11-17,Dhaka - Luis Forges,23.81684915785142,90.4284530340602,3500,paid,Officer Jahangir Chowdhury,
+284,108,Illegal Parking,2025-07-02,Sylhet - Paula Tunnel,24.873778053744473,91.83676960263666,800,paid,Officer Taslima Islam,Vehicle impounded briefly
+285,65,No Helmet,2025-10-18,Mymensingh - Brown Mountains,24.75145011596043,90.37087505488991,500,paid,Officer Ayesha Uddin,Vehicle impounded briefly
+286,122,Overloading,2026-05-16,Rangpur - Wang Fort,25.75391021042956,89.24967131714386,5000,paid,Officer Halima Uddin,
+287,48,Over Speeding,2023-03-17,Dhaka - Craig Shoals,23.774837441621596,90.36574320917352,2000,paid,Officer Halima Talukder,Repeat offense
+288,23,No Helmet,2024-01-01,Chattogram - Joseph Via,22.323033522743053,91.76163805448047,500,paid,Officer Halima Chowdhury,Issued via mobile court
+289,149,Fitness Certificate Expired,2024-09-04,Dhaka - Kathryn Forges,23.792582185084054,90.45225297762374,2500,unpaid,Officer Roksana Hossain,Repeat offense
+290,121,Over Speeding,2024-07-16,Chattogram - Kelly Villages,22.33982085269619,91.77457579092729,2000,paid,Officer Anisur Rahman,
+291,147,No Insurance,2025-09-17,Comilla - Gregory Ramp,23.483107413787135,91.19137780210814,2500,waived,Officer Sultana Sheikh,Vehicle impounded briefly
+292,82,Illegal Parking,2026-06-30,Comilla - Drake Square,23.446085334437416,91.14387131375543,800,paid,Officer Parvin Kazi,Issued via mobile court
+293,47,Fake Registration Plate,2024-02-01,Rajshahi - Sloan Burgs,24.324658091722583,88.55659867975183,10000,paid,Officer Salma Uddin,Vehicle impounded briefly
+294,107,Route Permit Violation,2026-02-21,Dhaka - Meza Port,23.8409043517869,90.38373379335648,3500,unpaid,Officer Sultana Miah,
+295,79,Illegal Parking,2023-01-13,Comilla - Anna Field,23.42208367629486,91.1642282890479,800,paid,Officer Mizanur Islam,First offense
+296,50,Fitness Certificate Expired,2025-09-08,Barishal - Weaver Extensions,22.74261630531736,90.3832254383829,2500,appealed,Officer Mahmuda Khan,Issued via mobile court
+297,138,Fitness Certificate Expired,2025-04-27,Mymensingh - Johnson Centers,24.78987899767651,90.37590222851865,2500,paid,Officer Kamrun Sarkar,Vehicle impounded briefly
+298,138,No Helmet,2024-11-10,Rajshahi - Carolyn Brooks,24.40445353334858,88.64300294695182,500,paid,Officer Jahangir Miah,
+299,87,Route Permit Violation,2026-03-15,Comilla - Smith Ridges,23.47126890889225,91.1496378910148,3500,appealed,Officer Aminul Sarkar,
+300,70,Route Permit Violation,2024-05-01,Chattogram - Lindsay Junctions,22.344058357688713,91.81614574689173,3500,paid,Officer Golam Talukder,First offense
