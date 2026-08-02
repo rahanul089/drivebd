@@ -6,12 +6,17 @@ st.set_page_config(page_title="DriveBD - Smart Driver & Vehicle Portal", page_ic
 
 init_db()
 
-# AUTO-SEED FOR CLOUD (Fixes the empty database)
+# --- AUTO-SEED BLOCK FOR STREAMLIT CLOUD ---
 import os
 from utils.db import DB_PATH
+
+# If the database file doesn't exist, generate all mock data and create it.
 if not os.path.exists(DB_PATH):
+    print("⚠️ Database not found. Generating fresh mock data...")
     from utils.seed import generate
     generate()
+    print("✅ Database seeding complete.")
+# --------------------------------------------
 # ---- Simple CSS theme ----
 st.markdown("""
 <style>
