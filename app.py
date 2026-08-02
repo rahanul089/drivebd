@@ -6,6 +6,12 @@ st.set_page_config(page_title="DriveBD - Smart Driver & Vehicle Portal", page_ic
 
 init_db()
 
+# AUTO-SEED FOR CLOUD (Fixes the empty database)
+import os
+from utils.db import DB_PATH
+if not os.path.exists(DB_PATH):
+    from utils.seed import generate
+    generate()
 # ---- Simple CSS theme ----
 st.markdown("""
 <style>
