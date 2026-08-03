@@ -11,7 +11,7 @@ from faker import Faker
 
 from utils.db import (
     init_db, get_session, User, Vehicle, Violation, Payment, Document,
-    ServiceHistory, Notification, Appeal, ActivityLog, Setting
+    ServiceHistory, Notification, Appeal, ActivityLog, Setting, Base, engine
 )
 from utils.auth import hash_password
 
@@ -94,15 +94,69 @@ def random_date(start_year=2022, end_year=2026):
     return start + dt.timedelta(days=random.randint(0, delta))
 
 
-def generate():
-    init_db()
-    db = get_session()
+def clear_tables(db):
+    """Safely clear all tables in reverse dependency order."""
+    try:
+        # Delete in reverse order of dependencies
+        db.query(ActivityLog).delete()
+        db.commit()
+    except:
+        db.rollback()
+    try:
+        db.query(Appeal).delete()
+        db.commit()
+    except:
+        db.rollback()
+    try:
+        db.query(Notification).delete()
+        db.commit()
+    except:
+        db.rollback()
+    try:
+        db.query(ServiceHistory).delete()
+        db.commit()
+    except:
+        db.rollback()
+    try:
+        db.query(Document).delete()
+        db.commit()
+    except:
+        db.rollback()
+    try:
+        db.query(Payment).delete()
+        db.commit()
+    except:
+        db.rollback()
+    try:
+        db.query(Violation).delete()
+        db.commit()
+    except:
+        db.rollback()
+    try:
+        db.query(Vehicle).delete()
+        db.commit()
+    except:
+        db.rollback()
+    try:
+        db.query(User).delete()
+        db.commit()
+    except:
+        db.rollback()
+    try:
+        db.query(Setting).delete()
+        db.commit()
+    except:
+        db.rollback()
 
-    # wipe existing data (idempotent re-seed)
-    for model in [ActivityLog, Notification, Appeal, Payment, ServiceHistory, Document,
-                  Violation, Vehicle, User, Setting]:
-        db.query(model).delete()
-    db.commit()
+
+def generate():
+    # Create tables if they don't exist
+    init_db()
+    
+    db = get_session()
+    
+    # Safe clear of existing data
+    clear_tables(db)
 
     users_rows, vehicles_rows, violations_rows = [], [], []
     payments_rows, documents_rows, service_rows = [], [], []
