@@ -12,14 +12,21 @@ st.set_page_config(page_title="DriveBD - Smart Driver & Vehicle Portal", page_ic
 # --- DB Setup ---
 init_db()
 
-# --- Auto-Seed Block ---
+# --- Auto-Seed Block (Fixed) ---
 import os
-from utils.db import DB_PATH
-if not os.path.exists(DB_PATH):
-    print("⚠️ Database not found. Generating fresh mock data...")
+from utils.db import DB_PATH, get_session, User
+
+db = get_session()
+admin_exists = db.query(User).filter(User.email == "admin@drivebd.gov.bd").first()
+db.close()
+
+if not admin_exists:
+    print("⚠️ Admin user not found. Generating mock data...")
     from utils.seed import generate
     generate()
     print("✅ Database seeding complete.")
+else:
+    print("✅ Database already seeded.")
 
 # ---------------------------------------------------------------------------
 # CUSTOM CSS (Kept your original blue theme + minor cleanups)
