@@ -153,7 +153,9 @@ class DriveDB:
                 'amount': v['fine'],
                 'date': self._fmt_date(self._days_from_now(-self._rand_int(1, 60))),
                 'status': 'completed',
-                'receiptNo': f'RCPT-{self._rand_int(100000, 999999)}'
+                'receiptNo': f'RCPT-{self._rand_int(100000, 999999)}',
+                'transactionId': f'TXN-{self._rand_int(100000, 999999)}',
+                'paymentMethod': self._rand(['bKash', 'Nagad', 'Card', 'Cash'])
             })
         
         # Notifications
@@ -319,6 +321,24 @@ def current_user():
 def is_logged_in():
     return st.session_state.get('user') is not None
 
+def make_admin(user_id):
+    """Make a user an admin"""
+    user = next((u for u in db.users if u['id'] == user_id), None)
+    if user:
+        user['role'] = 'admin'
+        # Add notification for the user
+        db.notifications.append({
+            'id': db._nid('n'),
+            'userId': user['id'],
+            'category': 'system',
+            'title': 'Admin Privileges Granted',
+            'message': 'You have been promoted to Admin. You can now manage users, appeals, and system settings.',
+            'read': False,
+            'date': db._fmt_date(datetime.now())
+        })
+        return True
+    return False
+
 # ================= HELPER FUNCTIONS =================
 def get_my_vehicles():
     user = current_user()
@@ -372,7 +392,8 @@ def status_badge(status):
         'appealed': 'badge-navy',
         'waived': 'badge-green',
         'approved': 'badge-green',
-        'rejected': 'badge-red'
+        'rejected': 'badge-red',
+        'processing': 'badge-blue'
     }
     return f'<span class="badge {colors.get(status, "badge-navy")}">{status}</span>'
 
@@ -410,7 +431,6 @@ def load_css():
       --font-b: 'Inter', sans-serif;
       --font-m: 'JetBrains Mono', monospace;
       
-      /* Colorful gradients */
       --gradient-blue: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       --gradient-green: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
       --gradient-orange: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -452,7 +472,6 @@ def load_css():
       color: #FFFFFF !important;
     }
     
-    /* Sidebar section headers */
     [data-testid="stSidebar"] .stMarkdown h3 {
       color: rgba(255,255,255,0.6) !important;
       font-size: 11px !important;
@@ -463,7 +482,6 @@ def load_css():
       padding: 0 4px !important;
     }
     
-    /* Sidebar user profile */
     .sidebar-profile {
       text-align: center;
       padding: 20px 0 16px 0;
@@ -498,7 +516,6 @@ def load_css():
       font-size: 12px;
     }
     
-    /* Sidebar logout button */
     .logout-btn {
       margin-top: 20px !important;
     }
@@ -943,6 +960,20 @@ def load_css():
       color: var(--green);
     }
     
+    .payment-method {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .payment-method.bkash { background: #E2175B22; color: #E2175B; }
+    .payment-method.nagad { background: #FF6B0022; color: #FF6B00; }
+    .payment-method.card { background: #667eea22; color: #667eea; }
+    .payment-method.cash { background: #11998e22; color: #11998e; }
+    
     /* ============ RESPONSIVE ============ */
     @media (max-width: 1000px) {
       .grid-cards { grid-template-columns: repeat(2, 1fr); }
@@ -962,6 +993,7 @@ def load_css():
 
 # ================= UI ROUTES =================
 def render_landing():
+    # [Previous landing page code - kept the same]
     st.markdown("""
     <div style="padding: 40px 0;">
         <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; max-width: 1280px; margin: 0 auto;">
@@ -1008,7 +1040,6 @@ def render_landing():
     </div>
     """, unsafe_allow_html=True)
     
-    # Features
     st.markdown("""
     <div style="padding: 60px 0;">
         <div style="text-align: center; max-width: 640px; margin: 0 auto 56px;">
@@ -1055,7 +1086,6 @@ def render_landing():
     </div>
     """, unsafe_allow_html=True)
     
-    # Benefits
     st.markdown("""
     <div style="padding: 60px 0; background: #0B2545; color: white; border-radius: 14px; margin: 20px 0;">
         <div style="text-align: center; max-width: 640px; margin: 0 auto 56px;">
@@ -1086,7 +1116,7 @@ def render_landing():
     """, unsafe_allow_html=True)
 
 def render_dashboard():
-    """Enhanced colorful dashboard inspired by Green University portal"""
+    # [Previous dashboard code - kept the same]
     user = current_user()
     vehicles = get_my_vehicles()
     violations = get_my_violations()
@@ -1100,7 +1130,6 @@ def render_dashboard():
     total_fine_value = sum(v['fine'] for v in pending)
     total_paid_value = sum(v['fine'] for v in paid)
     
-    # Count vehicles with expiring documents
     expiring_soon = []
     for v in vehicles:
         try:
@@ -1114,7 +1143,6 @@ def render_dashboard():
     
     first_name = user['name'].split()[0] if user.get('name') else 'there'
 
-    # ============ WELCOME BANNER ============
     st.markdown(f"""
     <div class="welcome-banner">
         <div>
@@ -1130,7 +1158,6 @@ def render_dashboard():
     </div>
     """, unsafe_allow_html=True)
 
-    # ============ QUICK ACTION GRID ============
     st.markdown("""
     <div style="display: flex; justify-content: space-between; align-items: center; margin: 8px 0 12px 0;">
         <h3 style="font-size: 16px; font-weight: 600; margin: 0;">🚀 Quick Actions & Services</h3>
@@ -1171,7 +1198,6 @@ def render_dashboard():
     </div>
     """, unsafe_allow_html=True)
 
-    # ============ COLORFUL METRIC CARDS ============
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.markdown(f"""
@@ -1206,7 +1232,6 @@ def render_dashboard():
         </div>
         """, unsafe_allow_html=True)
 
-    # ============ SECOND ROW OF METRICS ============
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.markdown(f"""
@@ -1242,12 +1267,10 @@ def render_dashboard():
         </div>
         """, unsafe_allow_html=True)
 
-    # ============ TWO COLUMN LAYOUT ============
     st.markdown('<div class="two-col">', unsafe_allow_html=True)
     
     col1, col2 = st.columns([1.6, 1])
     with col1:
-        # ============ RECENT ACTIVITY ============
         st.markdown('<div class="panel"><div class="panel-head"><h3>📋 Recent Activity</h3></div>', unsafe_allow_html=True)
         for act in db.activity[:6]:
             st.markdown(f"""
@@ -1262,7 +1285,6 @@ def render_dashboard():
         st.markdown('</div>', unsafe_allow_html=True)
     
     with col2:
-        # ============ UPCOMING EXPIRIES ============
         st.markdown('<div class="panel"><div class="panel-head"><h3>⏰ Upcoming Expiries</h3></div>', unsafe_allow_html=True)
         if expiring_soon:
             for v in expiring_soon[:5]:
@@ -1288,7 +1310,6 @@ def render_dashboard():
     
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # ============ VIOLATION SUMMARY ============
     if violations:
         st.markdown('<div class="panel">', unsafe_allow_html=True)
         st.markdown('<div class="panel-head"><h3>⚠️ Violation Summary</h3></div>', unsafe_allow_html=True)
@@ -1319,6 +1340,7 @@ def render_dashboard():
         st.markdown('</div>', unsafe_allow_html=True)
 
 def render_vehicles():
+    # [Previous vehicles code - kept the same]
     st.markdown("""
     <div class="page-head">
         <div>
@@ -1339,7 +1361,6 @@ def render_vehicles():
     vehicles = get_my_vehicles()
     user = current_user()
     
-    # Add Vehicle Form
     with st.expander("➕ Add New Vehicle"):
         st.markdown('<p style="color: var(--muted); font-size: 13px; margin-bottom: 16px;">Fill in the details below to register a vehicle to your account. All fields with * are required.</p>', unsafe_allow_html=True)
         
@@ -1356,7 +1377,6 @@ def render_vehicles():
             engine_no = st.text_input("Engine Number", placeholder="Optional")
             chassis_no = st.text_input("Chassis Number", placeholder="Optional")
         
-        # Expiry dates
         st.markdown('<p style="font-weight: 600; margin-top: 10px; margin-bottom: 6px;">📅 Document Expiry Dates</p>', unsafe_allow_html=True)
         col1, col2, col3, col4 = st.columns(4)
         with col1:
@@ -1418,7 +1438,6 @@ def render_vehicles():
                     st.success(f"✅ Vehicle {reg_no.strip().upper()} registered successfully!")
                     st.rerun()
     
-    # Search/filter
     col1, col2 = st.columns([2, 1])
     with col1:
         search = st.text_input("🔍 Search by reg no or model...", key="veh_search", placeholder="Search...")
@@ -1500,7 +1519,6 @@ def render_violations():
         st.markdown('<div class="empty">No violations match your filters.</div>', unsafe_allow_html=True)
         return
     
-    # Pagination
     per_page = 6
     total_pages = (len(filtered) - 1) // per_page + 1
     
@@ -1531,10 +1549,8 @@ def render_violations():
     
     df = pd.DataFrame(data)
     st.dataframe(df, use_container_width=True, hide_index=True)
-    
     st.markdown('</div></div>', unsafe_allow_html=True)
 
-    # Pay a fine / File an appeal
     pending_now = [v for v in filtered if v['status'] == 'pending']
     if pending_now:
         st.markdown('<div class="panel"><div class="panel-head"><h3>💳 Pay a fine or file an appeal</h3></div>', unsafe_allow_html=True)
@@ -1550,10 +1566,16 @@ def render_violations():
             if st.button("💳 Pay now", key=f"pay_btn_{pick['id']}", type="primary"):
                 pick['status'] = 'paid'
                 db.payments.append({
-                    'id': db._nid('p'), 'violationId': pick['id'], 'violationNo': pick['violationNo'],
-                    'method': method, 'amount': pick['fine'],
-                    'date': db._fmt_date(datetime.now()), 'status': 'completed',
-                    'receiptNo': f'RCPT-{random.randint(100000, 999999)}'
+                    'id': db._nid('p'), 
+                    'violationId': pick['id'], 
+                    'violationNo': pick['violationNo'],
+                    'method': method, 
+                    'amount': pick['fine'],
+                    'date': db._fmt_date(datetime.now()), 
+                    'status': 'completed',
+                    'receiptNo': f'RCPT-{random.randint(100000, 999999)}',
+                    'transactionId': f'TXN-{random.randint(100000, 999999)}',
+                    'paymentMethod': method
                 })
                 st.success(f"✅ Payment of ৳{pick['fine']:,} confirmed via {method}!")
                 st.rerun()
@@ -1565,19 +1587,35 @@ def render_violations():
                 if not reason.strip():
                     st.error("Please provide a reason for your appeal.")
                 else:
+                    # Create appeal and update violation status
                     pick['status'] = 'appealed'
                     db.appeals.append({
-                        'id': db._nid('a'), 'violationId': pick['id'], 'violationNo': pick['violationNo'],
-                        'reason': reason.strip(), 'status': 'pending',
+                        'id': db._nid('a'), 
+                        'violationId': pick['id'], 
+                        'violationNo': pick['violationNo'],
+                        'reason': reason.strip(), 
+                        'status': 'pending',
                         'submittedDate': db._fmt_date(datetime.now()),
                         'timeline': [{'label': 'Appeal submitted', 'date': db._fmt_date(datetime.now())}],
                         'adminResponse': None
                     })
+                    
+                    # Notify admin
+                    for admin in [u for u in db.users if u['role'] == 'admin']:
+                        db.notifications.append({
+                            'id': db._nid('n'),
+                            'userId': admin['id'],
+                            'category': 'system',
+                            'title': 'New Appeal Submitted',
+                            'message': f'Appeal for {pick["violationNo"]} has been submitted by {current_user()["name"]}.',
+                            'read': False,
+                            'date': db._fmt_date(datetime.now())
+                        })
+                    
                     st.success("✅ Appeal submitted! An admin will review it soon.")
                     st.rerun()
         st.markdown('</div>', unsafe_allow_html=True)
 
-    # Pagination controls
     if total_pages > 1:
         window = 5
         half = window // 2
@@ -1658,21 +1696,30 @@ def render_payments():
     
     data = []
     for p in payments:
+        method_class = {
+            'bKash': 'bkash',
+            'Nagad': 'nagad',
+            'Card': 'card',
+            'Cash': 'cash'
+        }.get(p.get('method', ''), '')
+        
         data.append({
             "Receipt No": p['receiptNo'],
+            "Transaction ID": p.get('transactionId', 'N/A'),
             "Violation": p['violationNo'],
-            "Method": p['method'],
+            "Method": f'<span class="payment-method {method_class}">{p["method"]}</span>',
             "Amount": f"৳{p['amount']:,}",
             "Date": p['date'],
-            "Status": p['status']
+            "Status": status_badge(p['status'])
         })
     
     st.markdown('<div class="panel">', unsafe_allow_html=True)
     df = pd.DataFrame(data)
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
 def render_documents():
+    # [Previous documents code - kept the same]
     st.markdown("""
     <div class="page-head">
         <div>
@@ -1696,7 +1743,6 @@ def render_documents():
         st.markdown('<div class="empty">🚗 Add a vehicle first to start uploading documents.</div>', unsafe_allow_html=True)
         return
     
-    # Upload form
     with st.expander("📤 Upload new document"):
         col1, col2 = st.columns(2)
         with col1:
@@ -1735,7 +1781,6 @@ def render_documents():
                 st.success(f"✅ {doc_type} uploaded successfully for {vehicle['regNo']}!")
                 st.rerun()
     
-    # Display documents
     if docs:
         cols = st.columns(4)
         for i, doc in enumerate(docs):
@@ -1755,7 +1800,7 @@ def render_documents():
         st.markdown('<div class="empty">📄 No documents uploaded yet. Use the form above to add your first document.</div>', unsafe_allow_html=True)
 
 def render_service():
-    """Enhanced service history with add service functionality"""
+    # [Previous service code - kept the same]
     st.markdown("""
     <div class="page-head">
         <div>
@@ -1785,7 +1830,6 @@ def render_service():
         st.markdown('<div class="empty">🚗 Add a vehicle first to start tracking service history.</div>', unsafe_allow_html=True)
         return
     
-    # Add Service Record
     with st.expander("➕ Add Service Record"):
         st.markdown('<p style="color: var(--muted); font-size: 13px; margin-bottom: 16px;">Log a new service visit for one of your vehicles.</p>', unsafe_allow_html=True)
         
@@ -1885,7 +1929,6 @@ def render_service():
                 st.success(f"✅ Service record added successfully for {selected_vehicle['regNo']}!")
                 st.rerun()
     
-    # Service Statistics
     if service:
         total_services = len(service)
         total_cost = sum(s['cost'] for s in service)
@@ -1931,7 +1974,6 @@ def render_service():
             </div>
             """, unsafe_allow_html=True)
     
-    # Filter services
     if service:
         col1, col2 = st.columns([2, 1])
         with col1:
@@ -1957,12 +1999,10 @@ def render_service():
             st.markdown('<div class="empty">No service records match your filters.</div>', unsafe_allow_html=True)
             return
         
-        # Display service records
         st.markdown('<div class="panel"><div style="overflow-x:auto;">', unsafe_allow_html=True)
         
         data = []
         for s in filtered:
-            # Check if service is due
             due_status = ""
             try:
                 days_since = (datetime.now() - datetime.strptime(s['date'], "%Y-%m-%d")).days
@@ -1990,7 +2030,6 @@ def render_service():
         st.markdown(f'<p style="color: #5B6B82; font-size: 12px; margin-top: 8px;">Showing {len(filtered)} service records</p>', unsafe_allow_html=True)
         st.markdown('</div></div>', unsafe_allow_html=True)
         
-        # Detailed view
         st.markdown('<div class="panel"><div class="panel-head"><h3>📋 Service Details</h3></div>', unsafe_allow_html=True)
         
         for i, s in enumerate(filtered[:10]):
@@ -2033,21 +2072,59 @@ def render_appeals():
     appeals = get_my_appeals()
     
     if not appeals:
-        st.markdown('<div class="empty">No appeals submitted.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="empty">📝 No appeals submitted. Go to Violations to appeal a fine.</div>', unsafe_allow_html=True)
         return
     
+    # Group appeals by status
+    pending_appeals = [a for a in appeals if a['status'] == 'pending']
+    approved_appeals = [a for a in appeals if a['status'] == 'approved']
+    rejected_appeals = [a for a in appeals if a['status'] == 'rejected']
+    
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown(f"""
+        <div style="text-align:center; padding:12px; background:#f8f9fa; border-radius:10px;">
+            <div style="font-size:24px; font-weight:700; color:#B4740E;">{len(pending_appeals)}</div>
+            <div style="font-size:12px; color:#5B6B82;">Pending</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col2:
+        st.markdown(f"""
+        <div style="text-align:center; padding:12px; background:#f8f9fa; border-radius:10px;">
+            <div style="font-size:24px; font-weight:700; color:#046A38;">{len(approved_appeals)}</div>
+            <div style="font-size:12px; color:#5B6B82;">Approved</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col3:
+        st.markdown(f"""
+        <div style="text-align:center; padding:12px; background:#f8f9fa; border-radius:10px;">
+            <div style="font-size:24px; font-weight:700; color:#C8102E;">{len(rejected_appeals)}</div>
+            <div style="font-size:12px; color:#5B6B82;">Rejected</div>
+        </div>
+        """, unsafe_allow_html=True)
+    
     for a in appeals:
+        # Get the violation details
+        violation = next((v for v in db.violations if v['id'] == a['violationId']), None)
+        
         st.markdown(f"""
         <div class="panel">
             <div class="panel-head">
-                <h3 class="mono">{a['violationNo']}</h3>
+                <div>
+                    <h3 class="mono">{a['violationNo']}</h3>
+                    <span style="font-size:12px; color:#5B6B82;">Vehicle: {violation['vehicleNo'] if violation else 'N/A'} · Fine: ৳{violation['fine'] if violation else 0}</span>
+                </div>
                 {status_badge(a['status'])}
             </div>
             <p style="font-size:13.5px; margin-bottom:14px;"><b>Reason:</b> {a['reason']}</p>
+            <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                <div><b>Submitted:</b> {a['submittedDate']}</div>
+                <div><b>Status:</b> {a['status'].title()}</div>
+            </div>
             <ul class="timeline">
                 {"".join(f'<li><b>{t["label"]}</b><span>{t["date"]}</span></li>' for t in a.get('timeline', []))}
             </ul>
-            {f'<div class="panel" style="background:#F6F7F5; margin-top:10px;"><b style="font-size:12.5px;">Admin response</b><p style="font-size:13px; margin-top:4px;">{a["adminResponse"]}</p></div>' if a.get('adminResponse') else ''}
+            {f'<div style="background:#F6F7F5; padding:12px; border-radius:8px; margin-top:10px;"><b style="font-size:12.5px;">Admin Response</b><p style="font-size:13px; margin-top:4px;">{a["adminResponse"]}</p></div>' if a.get('adminResponse') else ''}
         </div>
         """, unsafe_allow_html=True)
 
@@ -2286,6 +2363,7 @@ def render_profile():
         st.markdown('</div>', unsafe_allow_html=True)
 
 def render_admin():
+    """Enhanced Admin Panel with role management and payment overview"""
     if current_user()['role'] != 'admin':
         st.error("Admin access required")
         return
@@ -2300,13 +2378,20 @@ def render_admin():
     """, unsafe_allow_html=True)
     st.markdown("""
     <div class="page-help">
-        This panel is only visible to <b>admin</b> accounts. Use the <b>Users</b> tab to review or change a user's
-        role, <b>Vehicles</b> and <b>Violations</b> to see platform-wide activity, and <b>Appeals</b> to approve
-        (waive the fine) or reject pending appeals — the citizen who filed it will see your decision immediately.
+        This panel is only visible to <b>admin</b> accounts. Use the tabs below to manage users, review appeals, 
+        and monitor platform activity.
+        <ul>
+            <li><b>👤 Users:</b> View all users, change roles, or make someone an admin</li>
+            <li><b>📝 Appeals:</b> Review and decide on pending appeals</li>
+            <li><b>💰 Payments:</b> View all payment transactions</li>
+            <li><b>📊 Stats:</b> Platform-wide statistics</li>
+        </ul>
     </div>
     """, unsafe_allow_html=True)
     
+    # Statistics
     total_fines = sum(p['amount'] for p in db.payments)
+    pending_appeals_count = len([a for a in db.appeals if a['status'] == 'pending'])
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -2329,8 +2414,8 @@ def render_admin():
         st.markdown(f"""
         <div class="metric-card metric-card-orange">
             <span class="metric-icon">⚠️</span>
-            <span class="metric-label">Total Violations</span>
-            <span class="metric-value">{len(db.violations)}</span>
+            <span class="metric-label">Pending Appeals</span>
+            <span class="metric-value">{pending_appeals_count}</span>
         </div>
         """, unsafe_allow_html=True)
     with col4:
@@ -2342,88 +2427,199 @@ def render_admin():
         </div>
         """, unsafe_allow_html=True)
     
-    tab1, tab2, tab3, tab4 = st.tabs(["👤 Users", "🚗 Vehicles", "⚠️ Violations", "📝 Appeals"])
+    # Tabs
+    tab1, tab2, tab3, tab4 = st.tabs(["👤 Users", "📝 Appeals", "💰 Payments", "📊 Stats"])
     
     with tab1:
+        st.markdown("### User Management")
+        st.markdown("Manage user roles and account statuses.")
+        
+        # User management table
         data = []
         for u in db.users:
             data.append({
+                "ID": u['id'],
                 "Name": u['name'],
                 "Email": u['email'],
                 "Role": u['role'],
                 "Status": u['status'],
                 "Joined": u['joined']
             })
-        st.dataframe(pd.DataFrame(data), use_container_width=True, hide_index=True)
+        
+        df = pd.DataFrame(data)
+        st.dataframe(df, use_container_width=True, hide_index=True)
+        
+        # Make user admin section
+        st.markdown("### 👑 Make User Admin")
+        non_admin_users = [u for u in db.users if u['role'] != 'admin']
+        if non_admin_users:
+            selected_user = st.selectbox(
+                "Select a user to promote to Admin",
+                non_admin_users,
+                format_func=lambda u: f"{u['name']} ({u['email']})"
+            )
+            
+            if st.button("⭐ Make Admin", type="primary"):
+                if make_admin(selected_user['id']):
+                    st.success(f"✅ {selected_user['name']} is now an Admin!")
+                    st.rerun()
+                else:
+                    st.error("Failed to update user role.")
+        else:
+            st.info("All users are already admins.")
     
     with tab2:
-        data = []
-        for v in db.vehicles:
-            data.append({
-                "Reg No": v['regNo'],
-                "Owner": owner_name(v['id']),
-                "Type": v['type'],
-                "Status": v['status'],
-                "Insurance": v['insuranceExpiry']
-            })
-        st.dataframe(pd.DataFrame(data), use_container_width=True, hide_index=True)
+        st.markdown("### Appeal Management")
+        st.markdown("Review and decide on pending appeals.")
+        
+        pending_appeals = [a for a in db.appeals if a['status'] == 'pending']
+        
+        if not pending_appeals:
+            st.markdown('<div class="empty">✅ No pending appeals. All appeals have been reviewed.</div>', unsafe_allow_html=True)
+        else:
+            for a in pending_appeals:
+                violation = next((v for v in db.violations if v['id'] == a['violationId']), None)
+                submitter = next((u for u in db.users if u['id'] == violation['ownerId'] if violation else None), None)
+                
+                st.markdown(f"""
+                <div class="panel" style="border-left: 3px solid #B4740E;">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px;">
+                        <div>
+                            <h4 style="margin:0;">{a['violationNo']}</h4>
+                            <span style="font-size:12px; color:#5B6B82;">
+                                {submitter['name'] if submitter else 'Unknown'} · 
+                                Vehicle: {violation['vehicleNo'] if violation else 'N/A'} · 
+                                Fine: ৳{violation['fine'] if violation else 0}
+                            </span>
+                        </div>
+                        {status_badge('pending')}
+                    </div>
+                    <p style="margin-top:10px;"><b>Reason:</b> {a['reason']}</p>
+                    <p style="font-size:12px; color:#5B6B82;"><b>Submitted:</b> {a['submittedDate']}</p>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Review form for this appeal
+                with st.expander(f"📝 Review Appeal - {a['violationNo']}"):
+                    admin_comment = st.text_area("Admin Response", key=f"admin_response_{a['id']}", 
+                                                placeholder="Provide your decision and reasoning...")
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        if st.button("✅ Approve (Waive Fine)", key=f"approve_appeal_{a['id']}", type="primary", use_container_width=True):
+                            a['status'] = 'approved'
+                            a['adminResponse'] = admin_comment.strip() or "Appeal approved. Fine has been waived."
+                            a['timeline'].append({'label': 'Approved', 'date': db._fmt_date(datetime.now())})
+                            
+                            if violation:
+                                violation['status'] = 'waived'
+                            
+                            # Notify user
+                            if submitter:
+                                db.notifications.append({
+                                    'id': db._nid('n'),
+                                    'userId': submitter['id'],
+                                    'category': 'system',
+                                    'title': 'Appeal Approved',
+                                    'message': f'Your appeal for {a["violationNo"]} has been approved. The fine has been waived.',
+                                    'read': False,
+                                    'date': db._fmt_date(datetime.now())
+                                })
+                            
+                            st.success("✅ Appeal approved and fine waived!")
+                            st.rerun()
+                    
+                    with col2:
+                        if st.button("❌ Reject", key=f"reject_appeal_{a['id']}", use_container_width=True):
+                            a['status'] = 'rejected'
+                            a['adminResponse'] = admin_comment.strip() or "Appeal rejected. Fine remains due."
+                            a['timeline'].append({'label': 'Rejected', 'date': db._fmt_date(datetime.now())})
+                            
+                            if violation:
+                                violation['status'] = 'pending'
+                            
+                            # Notify user
+                            if submitter:
+                                db.notifications.append({
+                                    'id': db._nid('n'),
+                                    'userId': submitter['id'],
+                                    'category': 'system',
+                                    'title': 'Appeal Rejected',
+                                    'message': f'Your appeal for {a["violationNo"]} has been rejected. Please pay the fine.',
+                                    'read': False,
+                                    'date': db._fmt_date(datetime.now())
+                                })
+                            
+                            st.warning("Appeal rejected.")
+                            st.rerun()
     
     with tab3:
-        data = []
-        for v in db.violations:
-            data.append({
-                "No": v['violationNo'],
-                "Vehicle": v['vehicleNo'],
-                "Type": v['type'],
-                "Fine": f"৳{v['fine']:,}",
-                "Status": v['status']
-            })
-        st.dataframe(pd.DataFrame(data), use_container_width=True, hide_index=True)
+        st.markdown("### Payment Overview")
+        st.markdown("View all payment transactions across the platform.")
+        
+        if not db.payments:
+            st.markdown('<div class="empty">No payments recorded.</div>', unsafe_allow_html=True)
+        else:
+            # Payment stats
+            total_payments = len(db.payments)
+            total_amount = sum(p['amount'] for p in db.payments)
+            avg_amount = total_amount / total_payments if total_payments > 0 else 0
+            
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.markdown(f"""
+                <div style="text-align:center; padding:12px; background:#f8f9fa; border-radius:10px;">
+                    <div style="font-size:24px; font-weight:700; color:#046A38;">{total_payments}</div>
+                    <div style="font-size:12px; color:#5B6B82;">Total Transactions</div>
+                </div>
+                """, unsafe_allow_html=True)
+            with col2:
+                st.markdown(f"""
+                <div style="text-align:center; padding:12px; background:#f8f9fa; border-radius:10px;">
+                    <div style="font-size:24px; font-weight:700; color:#667eea;">৳{total_amount:,}</div>
+                    <div style="font-size:12px; color:#5B6B82;">Total Amount</div>
+                </div>
+                """, unsafe_allow_html=True)
+            with col3:
+                st.markdown(f"""
+                <div style="text-align:center; padding:12px; background:#f8f9fa; border-radius:10px;">
+                    <div style="font-size:24px; font-weight:700; color:#B4740E;">৳{avg_amount:,.0f}</div>
+                    <div style="font-size:12px; color:#5B6B82;">Average Payment</div>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            # Payment table
+            data = []
+            for p in db.payments:
+                data.append({
+                    "Receipt": p['receiptNo'],
+                    "Transaction": p.get('transactionId', 'N/A'),
+                    "Violation": p['violationNo'],
+                    "Method": p['method'],
+                    "Amount": f"৳{p['amount']:,}",
+                    "Date": p['date'],
+                    "Status": p['status']
+                })
+            
+            st.dataframe(pd.DataFrame(data), use_container_width=True, hide_index=True)
     
     with tab4:
-        if not db.appeals:
-            st.markdown('<div class="empty">No appeals submitted yet.</div>', unsafe_allow_html=True)
-        else:
-            data = []
-            for a in db.appeals:
-                data.append({
-                    "Violation": a['violationNo'],
-                    "Reason": a['reason'][:50] + "..." if len(a['reason']) > 50 else a['reason'],
-                    "Status": a['status'],
-                    "Submitted": a['submittedDate']
-                })
-            st.dataframe(pd.DataFrame(data), use_container_width=True, hide_index=True)
-
-            pending_appeals = [a for a in db.appeals if a['status'] == 'pending']
-            if pending_appeals:
-                st.markdown('<div class="panel-head" style="margin-top:16px;"><h3>Review a pending appeal</h3></div>', unsafe_allow_html=True)
-                pick = st.selectbox(
-                    "Select appeal",
-                    pending_appeals,
-                    format_func=lambda a: f"{a['violationNo']} · {a['reason'][:40]}"
-                )
-                comment = st.text_area("Admin comment", key=f"admin_comment_{pick['id']}")
-                col_a, col_b = st.columns(2)
-                with col_a:
-                    if st.button("✅ Approve (waive fine)", key=f"approve_{pick['id']}", type="primary", use_container_width=True):
-                        pick['status'] = 'approved'
-                        pick['adminResponse'] = comment.strip() or "Appeal approved. The fine has been waived."
-                        pick.setdefault('timeline', []).append({'label': 'Approved', 'date': db._fmt_date(datetime.now())})
-                        vio = next((v for v in db.violations if v['id'] == pick['violationId']), None)
-                        if vio:
-                            vio['status'] = 'waived'
-                        st.success("✅ Appeal approved and fine waived.")
-                        st.rerun()
-                with col_b:
-                    if st.button("❌ Reject", key=f"reject_{pick['id']}", use_container_width=True):
-                        pick['status'] = 'rejected'
-                        pick['adminResponse'] = comment.strip() or "Appeal rejected. The fine remains due."
-                        pick.setdefault('timeline', []).append({'label': 'Rejected', 'date': db._fmt_date(datetime.now())})
-                        vio = next((v for v in db.violations if v['id'] == pick['violationId']), None)
-                        if vio:
-                            vio['status'] = 'pending'
-                        st.warning("Appeal rejected.")
-                        st.rerun()
+        st.markdown("### Platform Statistics")
+        
+        # More detailed stats
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("#### 📊 Quick Stats")
+            st.metric("Total Users", len(db.users), delta=None)
+            st.metric("Total Vehicles", len(db.vehicles), delta=None)
+            st.metric("Total Violations", len(db.violations), delta=None)
+            st.metric("Total Payments", len(db.payments), delta=None)
+        
+        with col2:
+            st.markdown("#### 💰 Financial Overview")
+            st.metric("Total Revenue", f"৳{total_fines:,}", delta=None)
+            st.metric("Pending Payments", len([v for v in db.violations if v['status'] == 'pending']), delta=None)
+            st.metric("Total Appeals", len(db.appeals), delta=None)
+            st.metric("Pending Appeals", pending_appeals_count, delta=None)
 
 # ================= MAIN APP =================
 def main():
@@ -2534,9 +2730,8 @@ def main():
             </div>
             """, unsafe_allow_html=True)
         
-        # ============ COLORFUL SIDEBAR ============
+        # Colorful Sidebar
         with st.sidebar:
-            # User profile in sidebar
             st.markdown(f"""
             <div class="sidebar-profile">
                 <div class="avatar">{user['avatar']}</div>
@@ -2593,7 +2788,6 @@ def main():
                     st.rerun()
             
             st.divider()
-            # Logout button with custom styling
             st.markdown('<div class="logout-btn">', unsafe_allow_html=True)
             if st.button("🚪 Log out", use_container_width=True):
                 logout_user()
