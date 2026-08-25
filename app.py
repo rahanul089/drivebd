@@ -415,11 +415,102 @@ def load_css():
       --gradient-green: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
       --gradient-orange: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
       --gradient-purple: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
-      --gradient-teal: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      --gradient-sunset: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      --gradient-teal: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --gradient-pink: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      --gradient-dark: linear-gradient(135deg, #0B2545 0%, #1a3a6b 50%, #2d5a8e 100%);
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    /* ============ SIDEBAR STYLING ============ */
+    [data-testid="stSidebar"] {
+      background: linear-gradient(180deg, #0B2545 0%, #1a3a6b 60%, #2d5a8e 100%);
+    }
+    
+    [data-testid="stSidebar"] .stButton button {
+      background: rgba(255,255,255,0.08) !important;
+      border: 1px solid rgba(255,255,255,0.12) !important;
+      color: rgba(255,255,255,0.85) !important;
+      border-radius: 10px !important;
+      transition: all 0.3s ease !important;
+      font-weight: 500 !important;
+      padding: 10px 14px !important;
+      margin: 2px 0 !important;
+      text-align: left !important;
+      justify-content: flex-start !important;
+    }
+    
+    [data-testid="stSidebar"] .stButton button:hover {
+      background: rgba(255,255,255,0.18) !important;
+      border-color: rgba(255,255,255,0.3) !important;
+      transform: translateX(4px) !important;
+    }
+    
+    [data-testid="stSidebar"] .stButton button[data-baseweb="button"] {
+      background: rgba(255,255,255,0.15) !important;
+      border-color: rgba(255,255,255,0.25) !important;
+      color: #FFFFFF !important;
+    }
+    
+    /* Sidebar section headers */
+    [data-testid="stSidebar"] .stMarkdown h3 {
+      color: rgba(255,255,255,0.6) !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1.5px !important;
+      text-transform: uppercase !important;
+      margin-top: 12px !important;
+      padding: 0 4px !important;
+    }
+    
+    /* Sidebar user profile */
+    .sidebar-profile {
+      text-align: center;
+      padding: 20px 0 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 8px;
+    }
+    
+    .sidebar-profile .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      font-size: 24px;
+      font-weight: 700;
+      border: 3px solid rgba(255,255,255,0.2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    
+    .sidebar-profile .name {
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    
+    .sidebar-profile .role {
+      color: rgba(255,255,255,0.6);
+      font-size: 12px;
+    }
+    
+    /* Sidebar logout button */
+    .logout-btn {
+      margin-top: 20px !important;
+    }
+    .logout-btn button {
+      background: rgba(200,16,46,0.2) !important;
+      border-color: rgba(200,16,46,0.3) !important;
+      color: #ff6b6b !important;
+    }
+    .logout-btn button:hover {
+      background: rgba(200,16,46,0.35) !important;
+      border-color: rgba(200,16,46,0.5) !important;
+    }
     
     .main-header { font-size: 2.4rem; font-weight: 700; color: var(--navy); margin-bottom: 0; font-family: 'Sora', sans-serif; }
     .sub-header { color: #555; font-size: 1.05rem; margin-top: 0; }
@@ -463,6 +554,7 @@ def load_css():
     .metric-card-purple { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
     .metric-card-teal { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
     .metric-card-pink { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+    .metric-card-dark { background: linear-gradient(135deg, #0B2545 0%, #1a3a6b 100%); }
     
     /* ============ WELCOME BANNER ============ */
     .welcome-banner {
@@ -862,6 +954,7 @@ def load_css():
     @media (max-width: 600px) {
       .quick-grid { grid-template-columns: repeat(2, 1fr); }
       .metric-card .metric-value { font-size: 20px; }
+      .welcome-banner { padding: 20px; }
     }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -1043,35 +1136,35 @@ def render_dashboard():
         <h3 style="font-size: 16px; font-weight: 600; margin: 0;">🚀 Quick Actions & Services</h3>
     </div>
     <div class="quick-grid">
-        <div class="quick-item qi-green" onclick="window.location.href='#vehicles'">
+        <div class="quick-item qi-green">
             <span class="qi-icon">🚗</span>
             My Vehicles
         </div>
-        <div class="quick-item qi-blue" onclick="window.location.href='#violations'">
+        <div class="quick-item qi-blue">
             <span class="qi-icon">⚠️</span>
             Violations
         </div>
-        <div class="quick-item qi-orange" onclick="window.location.href='#payments'">
+        <div class="quick-item qi-orange">
             <span class="qi-icon">💰</span>
             Bill & Payment
         </div>
-        <div class="quick-item qi-purple" onclick="window.location.href='#documents'">
+        <div class="quick-item qi-purple">
             <span class="qi-icon">📄</span>
             Documents
         </div>
-        <div class="quick-item qi-teal" onclick="window.location.href='#service'">
+        <div class="quick-item qi-teal">
             <span class="qi-icon">🔧</span>
             Service
         </div>
-        <div class="quick-item qi-pink" onclick="window.location.href='#appeals'">
+        <div class="quick-item qi-pink">
             <span class="qi-icon">📝</span>
             Appeals
         </div>
-        <div class="quick-item qi-green" onclick="window.location.href='#brta'">
+        <div class="quick-item qi-green">
             <span class="qi-icon">🔎</span>
             BRTA Lookup
         </div>
-        <div class="quick-item qi-blue" onclick="window.location.href='#notifications'">
+        <div class="quick-item qi-blue">
             <span class="qi-icon">🔔</span>
             Notifications
         </div>
@@ -1229,7 +1322,7 @@ def render_vehicles():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>My Vehicles</h2>
+            <h2>🚗 My Vehicles</h2>
             <p>Register and manage every vehicle linked to your account.</p>
         </div>
     </div>
@@ -1264,7 +1357,7 @@ def render_vehicles():
             chassis_no = st.text_input("Chassis Number", placeholder="Optional")
         
         # Expiry dates
-        st.markdown('<p style="font-weight: 600; margin-top: 10px; margin-bottom: 6px;">Document Expiry Dates</p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-weight: 600; margin-top: 10px; margin-bottom: 6px;">📅 Document Expiry Dates</p>', unsafe_allow_html=True)
         col1, col2, col3, col4 = st.columns(4)
         with col1:
             reg_expiry = st.date_input("Registration Expiry", value=datetime.now() + timedelta(days=365))
@@ -1275,7 +1368,7 @@ def render_vehicles():
         with col4:
             insurance_expiry = st.date_input("Insurance Expiry", value=datetime.now() + timedelta(days=365))
         
-        if st.button("Register Vehicle", type="primary"):
+        if st.button("🚗 Register Vehicle", type="primary"):
             if not reg_no.strip():
                 st.error("Registration number is required.")
             elif not manufacturer.strip():
@@ -1328,7 +1421,7 @@ def render_vehicles():
     # Search/filter
     col1, col2 = st.columns([2, 1])
     with col1:
-        search = st.text_input("Search by reg no or model...", key="veh_search", placeholder="Search...")
+        search = st.text_input("🔍 Search by reg no or model...", key="veh_search", placeholder="Search...")
     with col2:
         type_filter = st.selectbox("Filter by type", ["All types", "Private Car", "Motorcycle", "Bus", "Truck", "CNG", "Other"], key="veh_filter")
     
@@ -1339,7 +1432,7 @@ def render_vehicles():
         filtered = [v for v in filtered if v['type'] == type_filter]
     
     if not filtered:
-        st.markdown('<div class="empty">No vehicles found. Add your first vehicle using the form above.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="empty">🚗 No vehicles found. Add your first vehicle using the form above.</div>', unsafe_allow_html=True)
     else:
         cols = st.columns(2)
         for i, v in enumerate(filtered):
@@ -1354,10 +1447,10 @@ def render_vehicles():
                         <span class="badge badge-navy">{v['type']}</span>
                     </div>
                     <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:14px; font-size:12px;">
-                        <div>Reg. Expiry <br><b>{v['regExpiry']}</b> {exp_badge(v['regExpiry'])}</div>
-                        <div>Road Tax <br><b>{v['taxExpiry']}</b> {exp_badge(v['taxExpiry'])}</div>
-                        <div>Fitness <br><b>{v['fitnessExpiry']}</b> {exp_badge(v['fitnessExpiry'])}</div>
-                        <div>Insurance <br><b>{v['insuranceExpiry']}</b> {exp_badge(v['insuranceExpiry'])}</div>
+                        <div>📅 Reg. Expiry <br><b>{v['regExpiry']}</b> {exp_badge(v['regExpiry'])}</div>
+                        <div>💰 Road Tax <br><b>{v['taxExpiry']}</b> {exp_badge(v['taxExpiry'])}</div>
+                        <div>✅ Fitness <br><b>{v['fitnessExpiry']}</b> {exp_badge(v['fitnessExpiry'])}</div>
+                        <div>🛡️ Insurance <br><b>{v['insuranceExpiry']}</b> {exp_badge(v['insuranceExpiry'])}</div>
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
@@ -1366,7 +1459,7 @@ def render_violations():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>Traffic Violations</h2>
+            <h2>⚠️ Traffic Violations</h2>
             <p>Search, review, pay fines or submit an appeal.</p>
         </div>
     </div>
@@ -1386,7 +1479,7 @@ def render_violations():
     
     col1, col2, col3 = st.columns([2, 1.5, 1.5])
     with col1:
-        search = st.text_input("Search violation, vehicle, driver...", key="vio_search", placeholder="Search...")
+        search = st.text_input("🔍 Search violation, vehicle, driver...", key="vio_search", placeholder="Search...")
     with col2:
         status_filter = st.selectbox("Status", ["all", "pending", "paid", "appealed", "waived"], key="vio_status")
     with col3:
@@ -1444,7 +1537,7 @@ def render_violations():
     # Pay a fine / File an appeal
     pending_now = [v for v in filtered if v['status'] == 'pending']
     if pending_now:
-        st.markdown('<div class="panel"><div class="panel-head"><h3>Pay a fine or file an appeal</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="panel"><div class="panel-head"><h3>💳 Pay a fine or file an appeal</h3></div>', unsafe_allow_html=True)
         pick = st.selectbox(
             "Select a violation",
             pending_now,
@@ -1454,7 +1547,7 @@ def render_violations():
 
         with tab_pay:
             method = st.selectbox("Payment method", ["bKash", "Nagad", "Card", "Cash"], key=f"pay_method_{pick['id']}")
-            if st.button("Pay now", key=f"pay_btn_{pick['id']}", type="primary"):
+            if st.button("💳 Pay now", key=f"pay_btn_{pick['id']}", type="primary"):
                 pick['status'] = 'paid'
                 db.payments.append({
                     'id': db._nid('p'), 'violationId': pick['id'], 'violationNo': pick['violationNo'],
@@ -1468,7 +1561,7 @@ def render_violations():
         with tab_appeal:
             reason = st.text_area("Reason for appeal", key=f"appeal_reason_{pick['id']}",
                                    placeholder="Explain why this violation should be reviewed...")
-            if st.button("Submit appeal", key=f"appeal_btn_{pick['id']}"):
+            if st.button("📝 Submit appeal", key=f"appeal_btn_{pick['id']}"):
                 if not reason.strip():
                     st.error("Please provide a reason for your appeal.")
                 else:
@@ -1512,7 +1605,7 @@ def render_payments():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>Payment History</h2>
+            <h2>💰 Payment History</h2>
             <p>All fine payments made across your vehicles.</p>
         </div>
     </div>
@@ -1583,7 +1676,7 @@ def render_documents():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>Document Vault</h2>
+            <h2>📁 Document Vault</h2>
             <p>Store and access every vehicle document securely.</p>
         </div>
     </div>
@@ -1600,7 +1693,7 @@ def render_documents():
     vehicles = get_my_vehicles()
     
     if not vehicles:
-        st.markdown('<div class="empty">Add a vehicle first to start uploading documents.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="empty">🚗 Add a vehicle first to start uploading documents.</div>', unsafe_allow_html=True)
         return
     
     # Upload form
@@ -1616,7 +1709,7 @@ def render_documents():
         
         uploaded_file = st.file_uploader("Choose file", type=['pdf', 'png', 'jpg', 'jpeg'])
         
-        if st.button("Upload Document", type="primary"):
+        if st.button("📤 Upload Document", type="primary"):
             if uploaded_file is None:
                 st.error("Please select a file to upload.")
             else:
@@ -1659,7 +1752,7 @@ def render_documents():
                 </div>
                 """, unsafe_allow_html=True)
     else:
-        st.markdown('<div class="empty">No documents uploaded yet. Use the form above to add your first document.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="empty">📄 No documents uploaded yet. Use the form above to add your first document.</div>', unsafe_allow_html=True)
 
 def render_service():
     """Enhanced service history with add service functionality"""
@@ -1689,7 +1782,7 @@ def render_service():
     service = get_my_service()
     
     if not vehicles:
-        st.markdown('<div class="empty">Add a vehicle first to start tracking service history.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="empty">🚗 Add a vehicle first to start tracking service history.</div>', unsafe_allow_html=True)
         return
     
     # Add Service Record
@@ -1834,7 +1927,7 @@ def render_service():
             <div class="metric-card metric-card-purple">
                 <span class="metric-icon">📋</span>
                 <span class="metric-label">Most Common</span>
-                <span class="metric-value">{most_common_service}</span>
+                <span class="metric-value" style="font-size:20px;">{most_common_service}</span>
             </div>
             """, unsafe_allow_html=True)
     
@@ -1842,7 +1935,7 @@ def render_service():
     if service:
         col1, col2 = st.columns([2, 1])
         with col1:
-            search = st.text_input("Search by vehicle or service type...", key="serv_search", placeholder="Search...")
+            search = st.text_input("🔍 Search by vehicle or service type...", key="serv_search", placeholder="Search...")
         with col2:
             vehicle_filter = st.selectbox(
                 "Filter by vehicle",
@@ -1869,22 +1962,36 @@ def render_service():
         
         data = []
         for s in filtered:
-            vehicle = next((v for v in vehicles if v['id'] == s['vehicleId']), None)
+            # Check if service is due
+            due_status = ""
+            try:
+                days_since = (datetime.now() - datetime.strptime(s['date'], "%Y-%m-%d")).days
+                if days_since > 180:
+                    due_status = "🔴 Overdue"
+                elif days_since > 120:
+                    due_status = "🟡 Due Soon"
+                else:
+                    due_status = "✅ OK"
+            except:
+                due_status = "—"
+            
             data.append({
                 "Vehicle": s['vehicleNo'],
                 "Service Type": s['type'],
                 "Date": s['date'],
                 "Mileage": f"{s['mileage']:,} km",
                 "Cost": f"৳{s['cost']:,}",
-                "Service Center": s.get('serviceCenter', 'N/A')
+                "Service Center": s.get('serviceCenter', 'N/A')[:20] + "..." if len(s.get('serviceCenter', 'N/A')) > 20 else s.get('serviceCenter', 'N/A'),
+                "Status": due_status
             })
         
         df = pd.DataFrame(data)
         st.dataframe(df, use_container_width=True, hide_index=True)
+        st.markdown(f'<p style="color: #5B6B82; font-size: 12px; margin-top: 8px;">Showing {len(filtered)} service records</p>', unsafe_allow_html=True)
         st.markdown('</div></div>', unsafe_allow_html=True)
         
         # Detailed view
-        st.markdown('<div class="panel"><div class="panel-head"><h3>Service Details</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="panel"><div class="panel-head"><h3>📋 Service Details</h3></div>', unsafe_allow_html=True)
         
         for i, s in enumerate(filtered[:10]):
             with st.expander(f"{s['date']} - {s['vehicleNo']} - {s['type']} (৳{s['cost']:,})"):
@@ -1904,13 +2011,13 @@ def render_service():
                     """)
         st.markdown('</div>', unsafe_allow_html=True)
     else:
-        st.markdown('<div class="empty">No service records yet. Use the form above to log your first service.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="empty">🔧 No service records yet. Use the form above to log your first service.</div>', unsafe_allow_html=True)
 
 def render_appeals():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>Appeals</h2>
+            <h2>📝 Appeals</h2>
             <p>Track the status of every violation you've contested.</p>
         </div>
     </div>
@@ -1948,7 +2055,7 @@ def render_notifications():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>Notification Center</h2>
+            <h2>🔔 Notification Center</h2>
             <p>Stay on top of renewals, fines and payments.</p>
         </div>
     </div>
@@ -1998,7 +2105,7 @@ def render_brta():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>BRTA Lookup (Mock Service)</h2>
+            <h2>🔎 BRTA Lookup (Mock Service)</h2>
             <p>Simulates GET /api/brta/vehicle, /tax and /fitness endpoints with realistic sample data.</p>
         </div>
     </div>
@@ -2013,7 +2120,7 @@ def render_brta():
     
     plate = st.text_input("Enter registration number", placeholder="e.g. DHAKA METRO GA 11-2481")
     
-    if st.button("Lookup") and plate:
+    if st.button("🔎 Lookup") and plate:
         v = next((v for v in db.vehicles if v['regNo'].lower() == plate.lower()), None)
         if v:
             result = {
@@ -2071,7 +2178,7 @@ def render_aidemo():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>AI Plate Recognition — Demo</h2>
+            <h2>✦ AI Plate Recognition — Demo</h2>
             <p>Upload a vehicle photo to simulate automatic plate detection and violation generation.</p>
         </div>
     </div>
@@ -2112,7 +2219,7 @@ def render_profile():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>Profile Settings</h2>
+            <h2>⚙️ Profile Settings</h2>
             <p>Manage your personal information and security.</p>
         </div>
     </div>
@@ -2135,7 +2242,7 @@ def render_profile():
         emergency = st.text_input("Emergency Contact", user['emergency'])
         address = st.text_area("Address", user['address'])
         
-        if st.button("Save Changes", type="primary"):
+        if st.button("💾 Save Changes", type="primary"):
             user['name'] = name
             user['phone'] = phone
             user['license'] = license_no
@@ -2148,9 +2255,9 @@ def render_profile():
     with col2:
         st.markdown(f"""
         <div class="panel" style="text-align:center;">
-            <div style="width:70px; height:70px; border-radius:50%; background:#0B2545; color:white; 
+            <div style="width:70px; height:70px; border-radius:50%; background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; 
                         display:flex; align-items:center; justify-content:center; margin:0 auto 12px; 
-                        font-size:22px; font-weight:700;">
+                        font-size:22px; font-weight:700; border:3px solid rgba(255,255,255,0.2);">
                 {user['avatar']}
             </div>
             <b>{user['name']}</b><br>
@@ -2160,11 +2267,11 @@ def render_profile():
         </div>
         """, unsafe_allow_html=True)
         
-        st.markdown('<div class="panel"><div class="panel-head"><h3>Change Password</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="panel"><div class="panel-head"><h3>🔑 Change Password</h3></div>', unsafe_allow_html=True)
         cur = st.text_input("Current password", type="password")
         new = st.text_input("New password", type="password")
         confirm_new = st.text_input("Confirm new password", type="password")
-        if st.button("Update Password", type="primary") and cur and new:
+        if st.button("🔄 Update Password", type="primary") and cur and new:
             if cur == user['password']:
                 if len(new) >= 6:
                     if new == confirm_new:
@@ -2186,7 +2293,7 @@ def render_admin():
     st.markdown("""
     <div class="page-head">
         <div>
-            <h2>Admin Panel</h2>
+            <h2>🛡️ Admin Panel</h2>
             <p>Platform-wide statistics and management tools.</p>
         </div>
     </div>
@@ -2235,7 +2342,7 @@ def render_admin():
         </div>
         """, unsafe_allow_html=True)
     
-    tab1, tab2, tab3, tab4 = st.tabs(["Users", "Vehicles", "Violations", "Appeals"])
+    tab1, tab2, tab3, tab4 = st.tabs(["👤 Users", "🚗 Vehicles", "⚠️ Violations", "📝 Appeals"])
     
     with tab1:
         data = []
@@ -2427,70 +2534,70 @@ def main():
             </div>
             """, unsafe_allow_html=True)
         
-        # Sidebar navigation
+        # ============ COLORFUL SIDEBAR ============
         with st.sidebar:
+            # User profile in sidebar
             st.markdown(f"""
-            <div style="text-align: center; padding: 16px 0; border-bottom: 1px solid #E2E6EA;">
-                <div style="width: 56px; height: 56px; border-radius: 50%; background: #0B2545; color: white; 
-                            display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; 
-                            font-size: 20px; font-weight: 700;">
-                    {user['avatar']}
-                </div>
-                <div style="font-weight: 600;">{user['name']}</div>
-                <div style="color: #5B6B82; font-size: 12px;">{user['role'].title()}</div>
+            <div class="sidebar-profile">
+                <div class="avatar">{user['avatar']}</div>
+                <div class="name">{user['name']}</div>
+                <div class="role">{user['role'].title()}</div>
             </div>
             """, unsafe_allow_html=True)
             
             st.markdown("### Overview")
-            if st.button(nav_label("📊 Dashboard", 'dashboard'), use_container_width=True, type="primary" if st.session_state.page == 'dashboard' else "secondary"):
+            if st.button("📊 Dashboard", use_container_width=True, type="primary" if st.session_state.page == 'dashboard' else "secondary"):
                 st.session_state.page = 'dashboard'
                 st.rerun()
             
-            st.markdown("### Manage")
-            if st.button(nav_label("🚗 My Vehicles", 'my_vehicles'), use_container_width=True, type="primary" if st.session_state.page == 'vehicles' else "secondary"):
+            st.markdown("### 🚗 Manage")
+            if st.button("My Vehicles", use_container_width=True, type="primary" if st.session_state.page == 'vehicles' else "secondary"):
                 st.session_state.page = 'vehicles'
                 st.rerun()
-            if st.button(nav_label("⚠ Violations", 'violations'), use_container_width=True, type="primary" if st.session_state.page == 'violations' else "secondary"):
+            if st.button("⚠️ Violations", use_container_width=True, type="primary" if st.session_state.page == 'violations' else "secondary"):
                 st.session_state.page = 'violations'
                 st.rerun()
-            if st.button(nav_label("💰 Payments", 'payments'), use_container_width=True, type="primary" if st.session_state.page == 'payments' else "secondary"):
+            if st.button("💰 Payments", use_container_width=True, type="primary" if st.session_state.page == 'payments' else "secondary"):
                 st.session_state.page = 'payments'
                 st.rerun()
-            if st.button(nav_label("📁 Documents", 'documents'), use_container_width=True, type="primary" if st.session_state.page == 'documents' else "secondary"):
+            if st.button("📁 Documents", use_container_width=True, type="primary" if st.session_state.page == 'documents' else "secondary"):
                 st.session_state.page = 'documents'
                 st.rerun()
-            if st.button(nav_label("🔧 Service", 'service'), use_container_width=True, type="primary" if st.session_state.page == 'service' else "secondary"):
+            if st.button("🔧 Service", use_container_width=True, type="primary" if st.session_state.page == 'service' else "secondary"):
                 st.session_state.page = 'service'
                 st.rerun()
-            if st.button(nav_label("📝 Appeals", 'appeals'), use_container_width=True, type="primary" if st.session_state.page == 'appeals' else "secondary"):
+            if st.button("📝 Appeals", use_container_width=True, type="primary" if st.session_state.page == 'appeals' else "secondary"):
                 st.session_state.page = 'appeals'
                 st.rerun()
             
-            st.markdown("### Tools")
-            if st.button(nav_label("🔎 BRTA Lookup", 'brta'), use_container_width=True, type="primary" if st.session_state.page == 'brta' else "secondary"):
+            st.markdown("### 🛠️ Tools")
+            if st.button("🔎 BRTA Lookup", use_container_width=True, type="primary" if st.session_state.page == 'brta' else "secondary"):
                 st.session_state.page = 'brta'
                 st.rerun()
-            if st.button(nav_label("✦ AI Demo", 'aidemo'), use_container_width=True, type="primary" if st.session_state.page == 'aidemo' else "secondary"):
+            if st.button("✦ AI Demo", use_container_width=True, type="primary" if st.session_state.page == 'aidemo' else "secondary"):
                 st.session_state.page = 'aidemo'
                 st.rerun()
-            if st.button(nav_label("🔔 Notifications", 'notifications'), use_container_width=True, type="primary" if st.session_state.page == 'notifications' else "secondary"):
+            if st.button("🔔 Notifications", use_container_width=True, type="primary" if st.session_state.page == 'notifications' else "secondary"):
                 st.session_state.page = 'notifications'
                 st.rerun()
             
-            st.markdown("### Account")
-            if st.button(nav_label("⚙ Profile", 'profile'), use_container_width=True, type="primary" if st.session_state.page == 'profile' else "secondary"):
+            st.markdown("### 👤 Account")
+            if st.button("⚙️ Profile", use_container_width=True, type="primary" if st.session_state.page == 'profile' else "secondary"):
                 st.session_state.page = 'profile'
                 st.rerun()
             
             if user['role'] == 'admin':
-                st.markdown("### Administration")
-                if st.button(nav_label("🛡 Admin Panel", 'admin'), use_container_width=True, type="primary" if st.session_state.page == 'admin' else "secondary"):
+                st.markdown("### 🛡️ Administration")
+                if st.button("Admin Panel", use_container_width=True, type="primary" if st.session_state.page == 'admin' else "secondary"):
                     st.session_state.page = 'admin'
                     st.rerun()
             
             st.divider()
-            if st.button(nav_label("🚪 Log out", 'logout'), use_container_width=True):
+            # Logout button with custom styling
+            st.markdown('<div class="logout-btn">', unsafe_allow_html=True)
+            if st.button("🚪 Log out", use_container_width=True):
                 logout_user()
+            st.markdown('</div>', unsafe_allow_html=True)
         
         # Main content
         valid_pages = {'dashboard', 'vehicles', 'violations', 'payments', 'documents',
